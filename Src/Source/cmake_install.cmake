@@ -1,4 +1,4 @@
-# Install script for directory: /boot/home/Projects/Bme/Src/Source
+# Install script for directory: /boot/home/Projects/bme/Src/Source
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,5 +35,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/boot/home/Projects/Bme/Src/Source/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/boot/home/Projects/bme/Src/Source/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

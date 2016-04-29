@@ -19,6 +19,7 @@
 #include <Resources.h>
 #include <Roster.h>
 #include <Screen.h>
+#include <cstring>
 
 // libwalter headers
 #include "BitmapUtils.h"

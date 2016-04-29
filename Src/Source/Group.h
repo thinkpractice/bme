@@ -20,7 +20,7 @@ class Group : public IXMLFlattenable
 		
 		//inherited from IXMLFlattenable
 		BString				XMLFlatten();
-		void				XMLUnflatten(xmlDocPtr xmlDocument);
+		//void				XMLUnflatten(xmlDocPtr xmlDocument);
 		
 		void				SetGroupName(BString name);
 		BString				GroupName();

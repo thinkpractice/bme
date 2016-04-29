@@ -3,6 +3,7 @@
 
 #include <support/SupportDefs.h>
 #include <support/String.h>
+#include <View.h>
 
 class BRect;
 class TagQueue;

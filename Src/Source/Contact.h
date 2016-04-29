@@ -10,9 +10,11 @@
 #include "IXMLFlattenable.h"
 
 #include <be/support/String.h>
-#include <vector.h>
+#include <vector>
 #include "Status.h"
 #include "Group.h"
+
+using namespace std;
 
 class Contact : public IXMLFlattenable
 {
@@ -24,7 +26,7 @@ class Contact : public IXMLFlattenable
 		
 		//inherited from IXMLFlattenable
 		BString				XMLFlatten();
-		void				XMLUnflatten(xmlDocPtr xmlDocument);
+		//void				XMLUnflatten(xmlDocPtr xmlDocument);
 		
 		void				SetPassport(BString passport);
 		BString				Passport();

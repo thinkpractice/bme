@@ -434,7 +434,7 @@ status_t AuthenticationHandler::SSLSend(const char *host, HTTPFormatter *send, H
 	//initialise ssl lib
 	SSLeay_add_ssl_algorithms();
 	// 	
- 	SSL_METHOD *meth = SSLv2_client_method();	
+ 	const SSL_METHOD *meth = SSLv2_client_method();	
  	//readable error messages 
 	SSL_load_error_strings(); 
 	SSL_CTX *sslCtx = SSL_CTX_new(meth);

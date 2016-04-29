@@ -8,8 +8,10 @@
 #define ICON_LOADER_H
 
 #include <be/storage/Path.h>
-#include <vector.h>
+#include <vector>
 #include "Emoticon.h"
+
+using namespace std;
 
 /**	Opens an iconprefs file, parses it, and loads the emoticons found.
 	@author Tim de Jong

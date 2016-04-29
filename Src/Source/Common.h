@@ -12,8 +12,8 @@
 #include <interface/Bitmap.h>
 #include <storage/File.h>
 #include <translation/TranslatorRoster.h>
-#include <libxml/tree.h>
-#include <vector.h>
+//#include <libxml/tree.h>
+#include <vector>
 #include "Contact.h"
 
 namespace Common
@@ -26,7 +26,7 @@ namespace Common
 	BBitmap*			ConvertBitmap(const unsigned char *rgbaBitmap, uint32 bitmapWidth, uint32 bitmapHeight);	
 	
 	//xml wrapper functions
-	xmlDocPtr			ParseXMLString(BString xmlString);
+//	xmlDocPtr			ParseXMLString(BString xmlString);
 	
 	uint32				FindTranslatorConstant(BTranslatorRoster *roster, const char *mime);
 	

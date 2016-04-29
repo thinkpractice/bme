@@ -4,7 +4,7 @@
 #include <interface/View.h>
 #include <support/String.h>
 #include <support/List.h>
-#include <vector.h>
+#include <vector>
 #include "TagQueue.h"
 
 class Tag;

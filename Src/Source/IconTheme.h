@@ -4,7 +4,7 @@
 #include <interface/Bitmap.h>
 #include <be/storage/Path.h>
 #include <be/support/String.h>
-#include <libxml/tree.h>
+//#include <libxml/tree.h>
 #include <map>
 #include <vector>
 #include "Status.h"
@@ -30,9 +30,9 @@ class IconTheme
 	
 	private:
 		void					ParseThemeFile(BPath themePath);
-		map<BString,Status*>	ParseStatusses(xmlNode *statussesNode);		
-		vector<Emoticon*>		ParseEmoticons(xmlNode *emoticonsNode);	
-		BString					GetNodeText(xmlNode *node);
+		//map<BString,Status*>	ParseStatusses(xmlNode *statussesNode);		
+		//vector<Emoticon*>		ParseEmoticons(xmlNode *emoticonsNode);	
+		//BString					GetNodeText(xmlNode *node);
 		BBitmap*				GetIconBitmap(BString path);
 	
 	private:

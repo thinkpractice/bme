@@ -9,7 +9,9 @@
 
 #include <be/interface/Rect.h>
 #include <be/interface/View.h>
-#include <vector.h>
+#include <vector>
+
+using namespace std;
 
 /**	View that contains a number of other views in different layers and
 	displays one of them.

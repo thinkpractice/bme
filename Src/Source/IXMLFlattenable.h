@@ -8,7 +8,7 @@
 #define XML_FLATTENABLE_H
 
 #include <be/support/String.h>
-#include <libxml/tree.h>
+//#include <libxml/tree.h>
 
 /**	Interface for classes which contents could be written to and read from
 	XML code. The classes adding the XML flatten functionality should inherit
@@ -32,7 +32,7 @@ class IXMLFlattenable
 		@param xmlDocument, a DOM_Document containing the xml code that specifies the
 		values/content for the object. 
 	 */
-	virtual void				XMLUnflatten(xmlDocPtr xmlDocument) = 0;
+	//virtual void				XMLUnflatten(xmlDocPtr xmlDocument) = 0;
 };
 
 #endif

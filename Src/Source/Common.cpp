@@ -12,6 +12,7 @@
 #include <be/storage/NodeInfo.h>
 #include <iostream>
 #include <stdio.h>
+#include <cstdlib>
 #include "PeopleDefs.h"
 
 BString Common::decodeURL(BString encoded)
@@ -108,7 +109,7 @@ BBitmap* Common::ConvertBitmap(const unsigned char *rgbaBitmap, uint32 bitmapWid
 	return bitmap;	
 }
 
-xmlDocPtr Common::ParseXMLString(BString xmlString)
+/*xmlDocPtr Common::ParseXMLString(BString xmlString)
 {	
 	xmlString.Prepend("<?xml version=\"1.0\"?>");
 	xmlDocPtr doc = xmlReadMemory(xmlString.String(), xmlString.Length(), "noname.xml", NULL, 0);
@@ -118,7 +119,7 @@ xmlDocPtr Common::ParseXMLString(BString xmlString)
     }  
 	
 	return doc;
-}
+}*/
 	
 uint32 Common::FindTranslatorConstant(BTranslatorRoster *roster, const char *mime)
 {

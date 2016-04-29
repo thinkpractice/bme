@@ -11,6 +11,8 @@
 #include "ServerLooper.h"
 #include "SBLooper.h"
 
+using namespace std;
+
 /** Class that handles the communication with both the Notification as the 
 	Dispatch server.
 	@author Tim de Jong

@@ -12,7 +12,7 @@ class ContactDetailsItem : public BListItem
 		ContactDetailsItem(Contact *contact);
 		virtual				~ContactDetailsItem();
 		
-		virtual void 		DrawItem(BView *owner, BRect itemRect, bool drawEverything = false);
+		virtual void 		DrawItem(BView *owner, BRect itemRect, bool drawEverything);
 		virtual void		Update(BView *owner, const BFont *font);
 		
 		void				SetContact(Contact *contact);

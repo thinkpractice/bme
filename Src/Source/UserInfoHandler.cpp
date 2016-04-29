@@ -8,7 +8,9 @@
 #include "UserInfoHandler.h"
 #endif
 
-#include <libxml/parser.h>
+#include <iostream>
+
+//#include <libxml/parser.h>
 #include "constants.h"
 #include "ProtocolConstants.h"
 #include "Common.h"
@@ -16,6 +18,8 @@
 #include "Exception.h"
 #include "Status.h"
 #include "MessageFields.h"
+
+using namespace std;
 
 UserInfoHandler::UserInfoHandler()
 					:	ServerHandler(),
@@ -183,7 +187,7 @@ cout << "K_USER_CHANGE_STATUS_MSG" << endl;
 		{
 			BString personalMessage;
 			//acquire personalMessage
-			if (message->FindString(K_PERSONAL_MESSAGE,  &personalMessage) == B_OK)
+	/*		if (message->FindString(K_PERSONAL_MESSAGE,  &personalMessage) == B_OK)
 			{
 				//create protocol message to actually change the personal message
 				BMessage *personalMsg = new BMessage(ProtocolConstants::K_ADD_COMMAND_MESSAGE);
@@ -208,7 +212,7 @@ cout << "K_USER_CHANGE_STATUS_MSG" << endl;
 				//preferences.ReplaceString( , personalMessage);
 				//prefsLock.Unlock();
 				SendCommandMessageTrID(personalMsg);			
-			}
+			}*/
 		}
 		break;		
 		default:

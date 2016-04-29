@@ -14,6 +14,8 @@
 #include <be/support/SupportDefs.h>
 #include <map>
 
+using namespace std;
+
 /** Class representing different IM statusses
 	@author Tim de Jong
  */

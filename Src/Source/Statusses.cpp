@@ -10,8 +10,13 @@
 
 #include <be/storage/File.h>
 #include <be/translation/TranslationUtils.h>
+#include <map>
+#include <iostream>
+#include <cstdlib>
 #include "StringList.h"
 #include "constants.h"
+
+using namespace std;
 
 BLocker statLock;
 map<BString,Status*> statusses;

@@ -23,7 +23,7 @@
 
 // Standard C headers
 #include <math.h>
-
+#include <cstring>
 // Haiku headers
 #include <Bitmap.h>
 

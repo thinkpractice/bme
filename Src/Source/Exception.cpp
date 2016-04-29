@@ -19,7 +19,7 @@ Exception::Exception(BMessage *archive)
 	archive->FindString(K_ERROR_MSG_FIELD, &m_errorMessage);	
 }
 
-Exception::~Exception()
+Exception::~Exception() throw()
 {
 }
 

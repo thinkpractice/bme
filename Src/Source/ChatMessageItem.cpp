@@ -2,6 +2,7 @@
 #include "ChatMessageItem.h"
 #endif
 
+#include <iostream>
 #include <interface/GraphicsDefs.h>
 #include <interface/View.h>
 #include <interface/Window.h>
@@ -10,6 +11,8 @@
 #include "Contact.h"
 #include "TextTag.h"
 #include "EmoticonTag.h"
+
+using namespace std;
 
 ChatMessageItem::ChatMessageItem(ConvMessage* message, bool followUp)
 						:	MessageItem(message),

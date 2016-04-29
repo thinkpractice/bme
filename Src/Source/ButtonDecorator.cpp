@@ -12,7 +12,7 @@
 // Standard C headers
 #include <math.h>
 #include <stdio.h>
-
+#include <cstring>
 // Haiku headers
 #include <Bitmap.h>
 #include <Font.h>

@@ -6,12 +6,12 @@
 //TODO: make this the single entry point for all xml related functions in Bme
 XMLParser::XMLParser(BString xmlString)
 {
-	m_xmlDocument = ParseXMLString(xmlString);
+	//m_xmlDocument = ParseXMLString(xmlString);
 }
 
 XMLParser::~XMLParser()
 {
-	xmlFreeDoc(m_xmlDocument);
+	//xmlFreeDoc(m_xmlDocument);
 }
 
 BString XMLParser::GetTagValue(const BString& tagName)
@@ -28,7 +28,7 @@ BString XMLParser::GetAttributeValue(const BString& attributeName)
 	return attribValue;
 }	
 
-xmlDocPtr XMLParser::ParseXMLString(BString xmlString)
+/*xmlDocPtr XMLParser::ParseXMLString(BString xmlString)
 {	
 	xmlString.Prepend("<?xml version=\"1.0\"?>");
 	xmlDocPtr doc = xmlReadMemory(xmlString.String(), xmlString.Length(), "noname.xml", NULL, 0);
@@ -38,4 +38,4 @@ xmlDocPtr XMLParser::ParseXMLString(BString xmlString)
     }  
 	
 	return doc;
-}
+}*/

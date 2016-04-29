@@ -21,7 +21,7 @@ class BitmapListItem : public BListItem
 		BitmapListItem(BBitmap *bitmap, BString label);
 		virtual				~BitmapListItem();
 		
-		virtual void		DrawItem(BView *owner, BRect frame, bool complete = false); 
+		virtual void		DrawItem(BView *owner, BRect frame, bool complete); 
 		virtual void		Update(BView *owner, const BFont *font);
 		
 	private:

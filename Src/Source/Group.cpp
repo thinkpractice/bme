@@ -32,9 +32,9 @@ BString	Group::XMLFlatten()
 	return xmlString;
 }
 
-void Group::XMLUnflatten(xmlDocPtr xmlDocument)
+/*void Group::XMLUnflatten(xmlDocPtr xmlDocument)
 {
-}
+}*/
 
 void Group::SetGroupName(BString name)
 {

@@ -7,7 +7,7 @@
 #include <interface/Font.h>
 #include <iostream>
 
-TextTag::TextTag(BFont tagFont = be_plain_font)
+TextTag::TextTag(BFont tagFont)
 			:	Tag(K_TEXT_TAG_TYPE),
 				m_tagFont(tagFont),
 				m_width(0.0f)

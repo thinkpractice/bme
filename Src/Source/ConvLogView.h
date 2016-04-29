@@ -13,8 +13,10 @@
 #include <interface/ListView.h>
 #include <interface/Bitmap.h>
 #include <support/String.h>
-#include <vector.h>
+#include <vector>
 #include "ConvMessage.h"
+
+using namespace std;
 
 class ConvLogView : public BListView
 {

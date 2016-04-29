@@ -58,7 +58,7 @@ vector<Emoticon*> IconTheme::Emoticons()
 
 void IconTheme::ParseThemeFile(BPath themePath)
 {
-	//read the theme setting xml file
+/*	//read the theme setting xml file
 	xmlDocPtr doc = xmlReadFile(themePath.Path(), NULL, 0);
     if (doc == NULL) 
     {
@@ -96,10 +96,10 @@ void IconTheme::ParseThemeFile(BPath themePath)
     	}
     }
     //free the xml document
-    xmlFreeDoc(doc);    
+    xmlFreeDoc(doc);  */  
 }
 
-map<BString,Status*> IconTheme::ParseStatusses(xmlNode *statussesNode)
+/*map<BString,Status*> IconTheme::ParseStatusses(xmlNode *statussesNode)
 {
 	map<BString,Status*> statusses;
 	//parse all status xml into objects
@@ -193,9 +193,9 @@ vector<Emoticon*> IconTheme::ParseEmoticons(xmlNode *emoticonsNode)
    	 	}
 	}	
 	return emoticons;
-}
+}*/
 
-BString IconTheme::GetNodeText(xmlNode *node)
+/*BString IconTheme::GetNodeText(xmlNode *node)
 {
 	BString nodeText;
 	if (node->type == XML_TEXT_NODE)
@@ -210,7 +210,7 @@ BString IconTheme::GetNodeText(xmlNode *node)
 		}	
 	}	
 	return nodeText;
-}
+}*/
 
 BBitmap* IconTheme::GetIconBitmap(BString path)
 {

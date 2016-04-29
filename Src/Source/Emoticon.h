@@ -11,6 +11,8 @@
 #include <support/String.h>
 #include <vector>
 
+using namespace std;
+
 class Emoticon
 {
 	public:

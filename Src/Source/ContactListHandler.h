@@ -11,7 +11,7 @@
 #include <be/app/Message.h>
 #include <be/app/MessageFilter.h>
 #include <be/storage/Path.h>
-#include <libxml/tree.h>
+//#include <libxml/tree.h>
 #include <map>
 #include "ServerHandler.h"
 #include "Contact.h"
@@ -34,7 +34,7 @@ class ContactListHandler : public ServerHandler
 		void				AddContact(Contact *contact);
 		void				RemoveContact(Contact *contact);
 		void				AddGroup(BString groupName, BString groupID);
-		void				SetPersonalMessage(Contact *contact, xmlDocPtr xmlDocument);
+		//void				SetPersonalMessage(Contact *contact, xmlDocPtr xmlDocument);
 		
 	private:
 		//use unique identifiers!!!

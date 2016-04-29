@@ -9,6 +9,7 @@
 #endif
 
 #include <stdlib.h>
+#include <iostream>
 #include "constants.h"
 #include "ProtocolConstants.h"
 #include "Common.h"
@@ -16,6 +17,8 @@
 #include "Status.h"
 #include "Statusses.h"
 #include "Preferences.h"
+
+using namespace std;
 
 ContactListHandler::ContactListHandler()
 						:	ServerHandler(),
@@ -241,12 +244,12 @@ cout << "GroupID 2= " << group << ", " << groupID.String() << endl;
 					BString payload;
 					if (message->FindString(K_PAYLOAD_DATA, &payload) == B_OK)
 					{
-						//message is formatted in xml, parse the xml
+					/*	//message is formatted in xml, parse the xml
 						xmlDocPtr xmlDocument = Common::ParseXMLString(payload);
 						//find contact to set the personal message for
 						Contact *contact = m_contactPassports[principalPassport];
 						//find out if personal message or music playing message
-						SetPersonalMessage(contact, xmlDocument);						
+						SetPersonalMessage(contact, xmlDocument);	*/					
 					}
 				}
 			}						
@@ -341,7 +344,7 @@ void ContactListHandler::AddGroup(BString groupName, BString groupID)
 	SendCommandMessage(groupMsg);
 }
 
-void ContactListHandler::SetPersonalMessage(Contact *contact, xmlDocPtr xmlDocument)
+/*void ContactListHandler::SetPersonalMessage(Contact *contact, xmlDocPtr xmlDocument)
 {
 	xmlNode *firstChild = xmlDocGetRootElement(xmlDocument);	
 	BString compareTag((char*)firstChild->name);
@@ -401,7 +404,7 @@ void ContactListHandler::SetPersonalMessage(Contact *contact, xmlDocPtr xmlDocum
 		}
 	}
 	xmlFreeDoc(xmlDocument);
-}
+}*/
 
 //==========================ContactListFilter================================
 ContactListFilter::ContactListFilter()

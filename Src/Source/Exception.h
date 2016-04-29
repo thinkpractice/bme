@@ -15,7 +15,7 @@ class Exception : public exception, BArchivable
 		Exception();
 		Exception(BString errorMessage);
 		Exception(BMessage *archive);
-		virtual				~Exception();
+		virtual				~Exception() throw();
 		
 		virtual BString		ErrorMessage();
 		virtual void		SetErrorMessage(BString errorMessage);

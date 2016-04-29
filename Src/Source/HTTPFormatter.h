@@ -6,6 +6,8 @@
 #include <map>
 #include <vector>
 
+using namespace std;
+
 typedef map<BString, BString> HeaderMap;
 
 class HTTPFormatter {

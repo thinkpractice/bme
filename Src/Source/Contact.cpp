@@ -48,9 +48,9 @@ BString	Contact::XMLFlatten()
 	return xmlString;
 }
 
-void Contact::XMLUnflatten(xmlDocPtr xmlDocument)
+/*void Contact::XMLUnflatten(xmlDocPtr xmlDocument)
 {
-}
+}*/
 
 void Contact::SetPassport(BString passport)
 {

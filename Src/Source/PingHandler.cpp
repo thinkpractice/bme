@@ -21,6 +21,8 @@
 #include "MessageFields.h"
 #include <iostream>
 
+using namespace std;
+
 PingHandler::PingHandler()
 				:	ServerHandler(),
 					m_receivedPong(true)

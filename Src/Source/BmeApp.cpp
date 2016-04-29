@@ -15,7 +15,7 @@
 #include <be/storage/AppFileInfo.h>
 #include <be/storage/File.h>
 #include <be/interface/Alert.h>
-#include <libxml/parser.h>
+//#include <libxml/parser.h>
 #include <iostream>
 #include "constants.h"
 #include "ProtocolConstants.h"
@@ -191,7 +191,7 @@ int main()
 {
 	BmeApp bme;		
 	bme.Run();		
-	xmlCleanupParser();
+	//xmlCleanupParser();
 				
 	return 0;
 }

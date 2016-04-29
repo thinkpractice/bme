@@ -14,6 +14,8 @@
 #include "MessageFields.h"
 #include <iostream>
 
+using namespace std;
+
 ServerLooper::ServerLooper(BHandler *owner)
 				:	BLooper(),
 					m_owner(owner),

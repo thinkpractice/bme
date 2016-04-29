@@ -1,6 +1,7 @@
 #include "HTTPFormatter.h"
 
 #include <stdio.h>
+#include <cstdlib>
 
 HTTPFormatter::HTTPFormatter(void) 
 {

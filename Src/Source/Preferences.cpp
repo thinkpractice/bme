@@ -48,7 +48,7 @@ BArchivable* Preferences::Instantiate(BMessage* archive)
 }
 
 void Preferences::AddData(const char* name, type_code type, const void* data, 
-					ssize_t numBytes, bool fixedSize = true,  int32 numItems = 1) throw(Exception)
+					ssize_t numBytes, bool fixedSize,  int32 numItems) throw(Exception)
 {
 	status_t error = m_prefsMessage.AddData(name, type, data, numBytes, fixedSize, numItems);
 	HandleAddError(error);
@@ -144,7 +144,7 @@ void Preferences::AddPointer(const char* name, const void* pointer) throw(Except
 	HandleAddError(error);
 }
 
-void Preferences::AddFlat(const char* name, BFlattenable* object, int32 numItems = 1) throw(Exception)
+void Preferences::AddFlat(const char* name, BFlattenable* object, int32 numItems) throw(Exception)
 {
 	status_t error = m_prefsMessage.AddFlat(name, object, numItems);
 	HandleAddError(error);
