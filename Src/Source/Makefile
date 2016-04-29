@@ -48,10 +48,10 @@ RM = /boot/system/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /boot/home/Projects/Bme/Src/Source
+CMAKE_SOURCE_DIR = /boot/home/Projects/bme/Src/Source
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /boot/home/Projects/Bme/Src/Source
+CMAKE_BINARY_DIR = /boot/home/Projects/bme/Src/Source
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /boot/home/Projects/Bme/Src/Source/CMakeFiles /boot/home/Projects/Bme/Src/Source/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /boot/home/Projects/bme/Src/Source/CMakeFiles /boot/home/Projects/bme/Src/Source/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /boot/home/Projects/Bme/Src/Source/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /boot/home/Projects/bme/Src/Source/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -1311,6 +1311,87 @@ NSUIFilter.cpp.s:
 	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/NSUIFilter.cpp.s
 .PHONY : NSUIFilter.cpp.s
 
+NetListItem.o: NetListItem.cpp.o
+
+.PHONY : NetListItem.o
+
+# target to build an object file
+NetListItem.cpp.o:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/NetListItem.cpp.o
+.PHONY : NetListItem.cpp.o
+
+NetListItem.i: NetListItem.cpp.i
+
+.PHONY : NetListItem.i
+
+# target to preprocess a source file
+NetListItem.cpp.i:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/NetListItem.cpp.i
+.PHONY : NetListItem.cpp.i
+
+NetListItem.s: NetListItem.cpp.s
+
+.PHONY : NetListItem.s
+
+# target to generate assembly for a file
+NetListItem.cpp.s:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/NetListItem.cpp.s
+.PHONY : NetListItem.cpp.s
+
+NetListView.o: NetListView.cpp.o
+
+.PHONY : NetListView.o
+
+# target to build an object file
+NetListView.cpp.o:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/NetListView.cpp.o
+.PHONY : NetListView.cpp.o
+
+NetListView.i: NetListView.cpp.i
+
+.PHONY : NetListView.i
+
+# target to preprocess a source file
+NetListView.cpp.i:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/NetListView.cpp.i
+.PHONY : NetListView.cpp.i
+
+NetListView.s: NetListView.cpp.s
+
+.PHONY : NetListView.s
+
+# target to generate assembly for a file
+NetListView.cpp.s:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/NetListView.cpp.s
+.PHONY : NetListView.cpp.s
+
+NetWatchWin.o: NetWatchWin.cpp.o
+
+.PHONY : NetWatchWin.o
+
+# target to build an object file
+NetWatchWin.cpp.o:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/NetWatchWin.cpp.o
+.PHONY : NetWatchWin.cpp.o
+
+NetWatchWin.i: NetWatchWin.cpp.i
+
+.PHONY : NetWatchWin.i
+
+# target to preprocess a source file
+NetWatchWin.cpp.i:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/NetWatchWin.cpp.i
+.PHONY : NetWatchWin.cpp.i
+
+NetWatchWin.s: NetWatchWin.cpp.s
+
+.PHONY : NetWatchWin.s
+
+# target to generate assembly for a file
+NetWatchWin.cpp.s:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/NetWatchWin.cpp.s
+.PHONY : NetWatchWin.cpp.s
+
 NetworkLooper.o: NetworkLooper.cpp.o
 
 .PHONY : NetworkLooper.o
@@ -2283,6 +2364,33 @@ WarningMessageItem.cpp.s:
 	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/WarningMessageItem.cpp.s
 .PHONY : WarningMessageItem.cpp.s
 
+WatchNetEndpoint.o: WatchNetEndpoint.cpp.o
+
+.PHONY : WatchNetEndpoint.o
+
+# target to build an object file
+WatchNetEndpoint.cpp.o:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/WatchNetEndpoint.cpp.o
+.PHONY : WatchNetEndpoint.cpp.o
+
+WatchNetEndpoint.i: WatchNetEndpoint.cpp.i
+
+.PHONY : WatchNetEndpoint.i
+
+# target to preprocess a source file
+WatchNetEndpoint.cpp.i:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/WatchNetEndpoint.cpp.i
+.PHONY : WatchNetEndpoint.cpp.i
+
+WatchNetEndpoint.s: WatchNetEndpoint.cpp.s
+
+.PHONY : WatchNetEndpoint.s
+
+# target to generate assembly for a file
+WatchNetEndpoint.cpp.s:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/WatchNetEndpoint.cpp.s
+.PHONY : WatchNetEndpoint.cpp.s
+
 XMLParser.o: XMLParser.cpp.o
 
 .PHONY : XMLParser.o
@@ -2478,6 +2586,15 @@ help:
 	@echo "... NSUIFilter.o"
 	@echo "... NSUIFilter.i"
 	@echo "... NSUIFilter.s"
+	@echo "... NetListItem.o"
+	@echo "... NetListItem.i"
+	@echo "... NetListItem.s"
+	@echo "... NetListView.o"
+	@echo "... NetListView.i"
+	@echo "... NetListView.s"
+	@echo "... NetWatchWin.o"
+	@echo "... NetWatchWin.i"
+	@echo "... NetWatchWin.s"
 	@echo "... NetworkLooper.o"
 	@echo "... NetworkLooper.i"
 	@echo "... NetworkLooper.s"
@@ -2586,6 +2703,9 @@ help:
 	@echo "... WarningMessageItem.o"
 	@echo "... WarningMessageItem.i"
 	@echo "... WarningMessageItem.s"
+	@echo "... WatchNetEndpoint.o"
+	@echo "... WatchNetEndpoint.i"
+	@echo "... WatchNetEndpoint.s"
 	@echo "... XMLParser.o"
 	@echo "... XMLParser.i"
 	@echo "... XMLParser.s"
