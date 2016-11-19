@@ -54,7 +54,7 @@ BmeApp::BmeApp()
 	appDir.GetParent(&iconPrefsPath);	
 	iconPrefsPath.Append(K_STANDARD_ICON_PATH);
 	iconPrefsPath.Append("iconprefs.txt");
-	LoadStatusses(iconPrefsPath);
+	//LoadStatusses(iconPrefsPath);
 	
 	BPath path = "/boot/home/Documents/Programming/Miksprojects/Internet/bme/trunk/Graphics/Icons/Standard/iconprefs.xml";
 	IconTheme theme(path);

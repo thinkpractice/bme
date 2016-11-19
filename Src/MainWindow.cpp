@@ -90,7 +90,7 @@ MainWindow::MainWindow(BRect frame, ProtocolLooper *protocolLooper)
 		
 	m_layeredView->addLayer(constructLoginView(m_layeredView->Bounds()));
 	m_layeredView->addLayer(constructContactView(m_layeredView->Bounds()));			
-	//m_layeredView->setVisible(MainWindow::K_CONTACT_VIEW_LAYER);	
+	m_layeredView->setVisible(MainWindow::K_CONTACT_VIEW_LAYER);	
 }
 
 MainWindow::~MainWindow()
@@ -104,16 +104,16 @@ BView *MainWindow::constructLoginView(BRect frame)
 	//loginView->SetViewColor(B_TRANSPARENT_COLOR);
 	//sign in statusView
 	Status *offlineStatus = FindStatus(Statusses::K_OFFLINE);
-	m_statusBitmap = offlineStatus->GetStatusIcon(63);
-	BRect bitmapBounds = m_statusBitmap->Bounds();
+	//m_statusBitmap = offlineStatus->GetStatusIcon(63);
+	BRect bitmapBounds = BRect(); //m_statusBitmap->Bounds();
 	float statusBitmapWidth = bitmapBounds.Width();
 	float statusBitmapHeight = bitmapBounds.Height();
 	float xStatus = (frame.Width() - statusBitmapWidth) / 2;
 	float yStatus = 50.0f;
 	BRect statusBitmapFrame(xStatus,yStatus,xStatus + statusBitmapWidth, yStatus + statusBitmapHeight);
 	
-	m_signinStatusView = new AnimatedBitmapView(statusBitmapFrame,"signinStatusView",B_FOLLOW_ALL_SIDES,B_WILL_DRAW|B_FULL_UPDATE_ON_RESIZE|B_FRAME_EVENTS,m_statusBitmap);
-	loginView->AddChild(m_signinStatusView);		
+	//m_signinStatusView = new AnimatedBitmapView(statusBitmapFrame,"signinStatusView",B_FOLLOW_ALL_SIDES,B_WILL_DRAW|B_FULL_UPDATE_ON_RESIZE|B_FRAME_EVENTS,m_statusBitmap);
+	//loginView->AddChild(m_signinStatusView);		
 	//construct loginView's contents
 		
 	//status bar for errors and login status
@@ -487,7 +487,7 @@ void MainWindow::AddStatusItems(StatusMenu *statusMenu)
 	for (SI p = statusses.begin(); p != statusses.end(); ++p)
 	{
 		Status *status = (*p).second;
-		if (status->IsUserChoice())
+		/*if (status->IsUserChoice())
 		{
 			BBitmap *statusIcon = status->GetStatusIcon();
 			BMessage *statusMessage = new BMessage(InterfaceMessages::K_USER_CHANGE_STATUS_MSG);
@@ -496,7 +496,7 @@ void MainWindow::AddStatusItems(StatusMenu *statusMenu)
 			BString statusName = status->GetStatusName();
 			StatusItem* statusItem = new StatusItem(statusIcon,statusName.String(),statusMessage);
 			statusMenu->AddItem(statusItem);			
-		}
+		}*/
 	}	
 }
 
