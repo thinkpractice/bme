@@ -18,6 +18,11 @@ file(GLOB BmeSrc
 link_directories("/boot/system/lib/x86")
 
 #link_directories("/boot/system/lib")
+
+
 add_executable(Bme ${BmeSrc})
+add_subdirectory(Models)
+add_subdirectory(Views)
 target_link_libraries(Bme be bnetapi crypto translation ssl)
+
 

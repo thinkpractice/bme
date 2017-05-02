@@ -1,0 +1,1 @@
+target_sources(Bme PRIVATE action.h property.h)
