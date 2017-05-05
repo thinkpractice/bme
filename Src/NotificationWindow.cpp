@@ -5,7 +5,7 @@
 #include <app/Messenger.h>
 #include <interface/Font.h>
 #include <interface/Screen.h>
-#include <be_apps/Deskbar/Deskbar.h>
+#include <Deskbar.h>
 #include "constants.h"
 #include "TextWrapper.h"
 #include "TaggedText.h"

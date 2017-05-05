@@ -2337,6 +2337,33 @@ UserPictView.cpp.s:
 	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/UserPictView.cpp.s
 .PHONY : UserPictView.cpp.s
 
+Views/ContactView.o: Views/ContactView.cpp.o
+
+.PHONY : Views/ContactView.o
+
+# target to build an object file
+Views/ContactView.cpp.o:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Views/ContactView.cpp.o
+.PHONY : Views/ContactView.cpp.o
+
+Views/ContactView.i: Views/ContactView.cpp.i
+
+.PHONY : Views/ContactView.i
+
+# target to preprocess a source file
+Views/ContactView.cpp.i:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Views/ContactView.cpp.i
+.PHONY : Views/ContactView.cpp.i
+
+Views/ContactView.s: Views/ContactView.cpp.s
+
+.PHONY : Views/ContactView.s
+
+# target to generate assembly for a file
+Views/ContactView.cpp.s:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Views/ContactView.cpp.s
+.PHONY : Views/ContactView.cpp.s
+
 WarningMessageItem.o: WarningMessageItem.cpp.o
 
 .PHONY : WarningMessageItem.o
@@ -2700,6 +2727,9 @@ help:
 	@echo "... UserPictView.o"
 	@echo "... UserPictView.i"
 	@echo "... UserPictView.s"
+	@echo "... Views/ContactView.o"
+	@echo "... Views/ContactView.i"
+	@echo "... Views/ContactView.s"
 	@echo "... WarningMessageItem.o"
 	@echo "... WarningMessageItem.i"
 	@echo "... WarningMessageItem.s"

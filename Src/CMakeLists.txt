@@ -10,10 +10,18 @@ set(CMAKE_LIBRARY_PATH $(CMAKE_LIBRARY_PATH) /boot/system/lib)
 file(GLOB BmeSrc 
 "*.h"
 "*.cpp"
+"Controllers/*.h" 
+"Controllers/*.cpp"
+"Models/*.h" 
+"Models/*.cpp"
+"Views/*.h" 
+"Views/*.cpp"
 )
 
+set( ProjectIncludes "." "Controllers" "Models" "Views")
+
 #find_package(LibXml2 REQUIRED)
-#include_directories(${LIBXML2_INCLUDE_DIR})
+include_directories(${ProjectIncludes})
 
 link_directories("/boot/system/lib/x86")
 
@@ -21,8 +29,6 @@ link_directories("/boot/system/lib/x86")
 
 
 add_executable(Bme ${BmeSrc})
-add_subdirectory(Models)
-add_subdirectory(Views)
 target_link_libraries(Bme be bnetapi crypto translation ssl)
 
 
