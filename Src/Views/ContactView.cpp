@@ -3,14 +3,16 @@
  * All rights reserved. Distributed under the terms of the MIT license.
  */
 
-
+#include <interface/MenuField.h>
 #include "ContactView.h"
 #include "GradientView.h"
 #include "UserPictView.h"
 #include "MailView.h"
+#include "Status.h"
+#include "constants.h"
 
 ContactView::ContactView(BRect frame)
-				: BView(frame,"contactView",B_FOLLOW_ALL_SIDES,B_WILL_DRAW);
+				: BView(frame,"contactView",B_FOLLOW_ALL_SIDES,B_WILL_DRAW)
 {
 	//construct gradientView for top!
 	BRect gradientFrame(0.0f,0.0f,frame.Width(),0.30f * frame.Height());	
@@ -57,21 +59,20 @@ ContactView::ContactView(BRect frame)
 	m_contactListView->SetInvocationMessage(new BMessage(InterfaceMessages::K_CONTACT_LIST_INVOKE_MSG));
 	
 	BScrollView *contactScrollView = new BScrollView("contactScroll",m_contactListView, B_FOLLOW_ALL_SIDES, 0,false,true, B_NO_BORDER);
-	contactView->AddChild(contactScrollView);
+	AddChild(contactScrollView);
 		
-	return contactView;
 }
 
-ContactView::~ContactView();
+ContactView::~ContactView()
 {
 }
 
 void ContactView::AddStatusItems(StatusMenu *statusMenu)
 {
-	for (SI p = statusses.begin(); p != statusses.end(); ++p)
+/*	for (auto& kv : statusses)
 	{
-		Status *status = (*p).second;
-		/*if (status->IsUserChoice())
+		Status *status = kv.second;
+		if (status->IsUserChoice())
 		{
 			BBitmap *statusIcon = status->GetStatusIcon();
 			BMessage *statusMessage = new BMessage(InterfaceMessages::K_USER_CHANGE_STATUS_MSG);
@@ -80,6 +81,7 @@ void ContactView::AddStatusItems(StatusMenu *statusMenu)
 			BString statusName = status->GetStatusName();
 			StatusItem* statusItem = new StatusItem(statusIcon,statusName.String(),statusMessage);
 			statusMenu->AddItem(statusItem);			
-		}*/
+		}
 	}	
+*/
 }

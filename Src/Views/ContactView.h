@@ -28,5 +28,4 @@ private:
 	ContactListView		*m_contactListView;
 };
 
-
 #endif // _H
