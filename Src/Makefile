@@ -150,114 +150,6 @@ BmeApp.cpp.s:
 	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/BmeApp.cpp.s
 .PHONY : BmeApp.cpp.s
 
-Common.o: Common.cpp.o
-
-.PHONY : Common.o
-
-# target to build an object file
-Common.cpp.o:
-	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Common.cpp.o
-.PHONY : Common.cpp.o
-
-Common.i: Common.cpp.i
-
-.PHONY : Common.i
-
-# target to preprocess a source file
-Common.cpp.i:
-	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Common.cpp.i
-.PHONY : Common.cpp.i
-
-Common.s: Common.cpp.s
-
-.PHONY : Common.s
-
-# target to generate assembly for a file
-Common.cpp.s:
-	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Common.cpp.s
-.PHONY : Common.cpp.s
-
-IconLoader.o: IconLoader.cpp.o
-
-.PHONY : IconLoader.o
-
-# target to build an object file
-IconLoader.cpp.o:
-	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/IconLoader.cpp.o
-.PHONY : IconLoader.cpp.o
-
-IconLoader.i: IconLoader.cpp.i
-
-.PHONY : IconLoader.i
-
-# target to preprocess a source file
-IconLoader.cpp.i:
-	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/IconLoader.cpp.i
-.PHONY : IconLoader.cpp.i
-
-IconLoader.s: IconLoader.cpp.s
-
-.PHONY : IconLoader.s
-
-# target to generate assembly for a file
-IconLoader.cpp.s:
-	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/IconLoader.cpp.s
-.PHONY : IconLoader.cpp.s
-
-IconTheme.o: IconTheme.cpp.o
-
-.PHONY : IconTheme.o
-
-# target to build an object file
-IconTheme.cpp.o:
-	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/IconTheme.cpp.o
-.PHONY : IconTheme.cpp.o
-
-IconTheme.i: IconTheme.cpp.i
-
-.PHONY : IconTheme.i
-
-# target to preprocess a source file
-IconTheme.cpp.i:
-	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/IconTheme.cpp.i
-.PHONY : IconTheme.cpp.i
-
-IconTheme.s: IconTheme.cpp.s
-
-.PHONY : IconTheme.s
-
-# target to generate assembly for a file
-IconTheme.cpp.s:
-	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/IconTheme.cpp.s
-.PHONY : IconTheme.cpp.s
-
-MainWindowUIFilter.o: MainWindowUIFilter.cpp.o
-
-.PHONY : MainWindowUIFilter.o
-
-# target to build an object file
-MainWindowUIFilter.cpp.o:
-	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/MainWindowUIFilter.cpp.o
-.PHONY : MainWindowUIFilter.cpp.o
-
-MainWindowUIFilter.i: MainWindowUIFilter.cpp.i
-
-.PHONY : MainWindowUIFilter.i
-
-# target to preprocess a source file
-MainWindowUIFilter.cpp.i:
-	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/MainWindowUIFilter.cpp.i
-.PHONY : MainWindowUIFilter.cpp.i
-
-MainWindowUIFilter.s: MainWindowUIFilter.cpp.s
-
-.PHONY : MainWindowUIFilter.s
-
-# target to generate assembly for a file
-MainWindowUIFilter.cpp.s:
-	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/MainWindowUIFilter.cpp.s
-.PHONY : MainWindowUIFilter.cpp.s
-
 Models/AuthenticationHandler.o: Models/AuthenticationHandler.cpp.o
 
 .PHONY : Models/AuthenticationHandler.o
@@ -582,6 +474,33 @@ Models/Group.cpp.s:
 	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Models/Group.cpp.s
 .PHONY : Models/Group.cpp.s
 
+Models/IconTheme.o: Models/IconTheme.cpp.o
+
+.PHONY : Models/IconTheme.o
+
+# target to build an object file
+Models/IconTheme.cpp.o:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Models/IconTheme.cpp.o
+.PHONY : Models/IconTheme.cpp.o
+
+Models/IconTheme.i: Models/IconTheme.cpp.i
+
+.PHONY : Models/IconTheme.i
+
+# target to preprocess a source file
+Models/IconTheme.cpp.i:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Models/IconTheme.cpp.i
+.PHONY : Models/IconTheme.cpp.i
+
+Models/IconTheme.s: Models/IconTheme.cpp.s
+
+.PHONY : Models/IconTheme.s
+
+# target to generate assembly for a file
+Models/IconTheme.cpp.s:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Models/IconTheme.cpp.s
+.PHONY : Models/IconTheme.cpp.s
+
 Models/PingHandler.o: Models/PingHandler.cpp.o
 
 .PHONY : Models/PingHandler.o
@@ -608,6 +527,33 @@ Models/PingHandler.s: Models/PingHandler.cpp.s
 Models/PingHandler.cpp.s:
 	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Models/PingHandler.cpp.s
 .PHONY : Models/PingHandler.cpp.s
+
+Models/PreferenceFactory.o: Models/PreferenceFactory.cpp.o
+
+.PHONY : Models/PreferenceFactory.o
+
+# target to build an object file
+Models/PreferenceFactory.cpp.o:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Models/PreferenceFactory.cpp.o
+.PHONY : Models/PreferenceFactory.cpp.o
+
+Models/PreferenceFactory.i: Models/PreferenceFactory.cpp.i
+
+.PHONY : Models/PreferenceFactory.i
+
+# target to preprocess a source file
+Models/PreferenceFactory.cpp.i:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Models/PreferenceFactory.cpp.i
+.PHONY : Models/PreferenceFactory.cpp.i
+
+Models/PreferenceFactory.s: Models/PreferenceFactory.cpp.s
+
+.PHONY : Models/PreferenceFactory.s
+
+# target to generate assembly for a file
+Models/PreferenceFactory.cpp.s:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Models/PreferenceFactory.cpp.s
+.PHONY : Models/PreferenceFactory.cpp.s
 
 Models/Preferences.o: Models/Preferences.cpp.o
 
@@ -662,6 +608,33 @@ Models/PreferencesHandler.s: Models/PreferencesHandler.cpp.s
 Models/PreferencesHandler.cpp.s:
 	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Models/PreferencesHandler.cpp.s
 .PHONY : Models/PreferencesHandler.cpp.s
+
+Models/PrefsMethods.o: Models/PrefsMethods.cpp.o
+
+.PHONY : Models/PrefsMethods.o
+
+# target to build an object file
+Models/PrefsMethods.cpp.o:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Models/PrefsMethods.cpp.o
+.PHONY : Models/PrefsMethods.cpp.o
+
+Models/PrefsMethods.i: Models/PrefsMethods.cpp.i
+
+.PHONY : Models/PrefsMethods.i
+
+# target to preprocess a source file
+Models/PrefsMethods.cpp.i:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Models/PrefsMethods.cpp.i
+.PHONY : Models/PrefsMethods.cpp.i
+
+Models/PrefsMethods.s: Models/PrefsMethods.cpp.s
+
+.PHONY : Models/PrefsMethods.s
+
+# target to generate assembly for a file
+Models/PrefsMethods.cpp.s:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Models/PrefsMethods.cpp.s
+.PHONY : Models/PrefsMethods.cpp.s
 
 Models/ProtocolHandler.o: Models/ProtocolHandler.cpp.o
 
@@ -1203,60 +1176,6 @@ Models/UserInfoHandler.cpp.s:
 	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Models/UserInfoHandler.cpp.s
 .PHONY : Models/UserInfoHandler.cpp.s
 
-PreferenceFactory.o: PreferenceFactory.cpp.o
-
-.PHONY : PreferenceFactory.o
-
-# target to build an object file
-PreferenceFactory.cpp.o:
-	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/PreferenceFactory.cpp.o
-.PHONY : PreferenceFactory.cpp.o
-
-PreferenceFactory.i: PreferenceFactory.cpp.i
-
-.PHONY : PreferenceFactory.i
-
-# target to preprocess a source file
-PreferenceFactory.cpp.i:
-	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/PreferenceFactory.cpp.i
-.PHONY : PreferenceFactory.cpp.i
-
-PreferenceFactory.s: PreferenceFactory.cpp.s
-
-.PHONY : PreferenceFactory.s
-
-# target to generate assembly for a file
-PreferenceFactory.cpp.s:
-	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/PreferenceFactory.cpp.s
-.PHONY : PreferenceFactory.cpp.s
-
-PrefsMethods.o: PrefsMethods.cpp.o
-
-.PHONY : PrefsMethods.o
-
-# target to build an object file
-PrefsMethods.cpp.o:
-	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/PrefsMethods.cpp.o
-.PHONY : PrefsMethods.cpp.o
-
-PrefsMethods.i: PrefsMethods.cpp.i
-
-.PHONY : PrefsMethods.i
-
-# target to preprocess a source file
-PrefsMethods.cpp.i:
-	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/PrefsMethods.cpp.i
-.PHONY : PrefsMethods.cpp.i
-
-PrefsMethods.s: PrefsMethods.cpp.s
-
-.PHONY : PrefsMethods.s
-
-# target to generate assembly for a file
-PrefsMethods.cpp.s:
-	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/PrefsMethods.cpp.s
-.PHONY : PrefsMethods.cpp.s
-
 Utils/BitmapUtils.o: Utils/BitmapUtils.cpp.o
 
 .PHONY : Utils/BitmapUtils.o
@@ -1284,6 +1203,33 @@ Utils/BitmapUtils.cpp.s:
 	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Utils/BitmapUtils.cpp.s
 .PHONY : Utils/BitmapUtils.cpp.s
 
+Utils/Common.o: Utils/Common.cpp.o
+
+.PHONY : Utils/Common.o
+
+# target to build an object file
+Utils/Common.cpp.o:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Utils/Common.cpp.o
+.PHONY : Utils/Common.cpp.o
+
+Utils/Common.i: Utils/Common.cpp.i
+
+.PHONY : Utils/Common.i
+
+# target to preprocess a source file
+Utils/Common.cpp.i:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Utils/Common.cpp.i
+.PHONY : Utils/Common.cpp.i
+
+Utils/Common.s: Utils/Common.cpp.s
+
+.PHONY : Utils/Common.s
+
+# target to generate assembly for a file
+Utils/Common.cpp.s:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Utils/Common.cpp.s
+.PHONY : Utils/Common.cpp.s
+
 Utils/HTTPFormatter.o: Utils/HTTPFormatter.cpp.o
 
 .PHONY : Utils/HTTPFormatter.o
@@ -1310,6 +1256,33 @@ Utils/HTTPFormatter.s: Utils/HTTPFormatter.cpp.s
 Utils/HTTPFormatter.cpp.s:
 	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Utils/HTTPFormatter.cpp.s
 .PHONY : Utils/HTTPFormatter.cpp.s
+
+Utils/IconLoader.o: Utils/IconLoader.cpp.o
+
+.PHONY : Utils/IconLoader.o
+
+# target to build an object file
+Utils/IconLoader.cpp.o:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Utils/IconLoader.cpp.o
+.PHONY : Utils/IconLoader.cpp.o
+
+Utils/IconLoader.i: Utils/IconLoader.cpp.i
+
+.PHONY : Utils/IconLoader.i
+
+# target to preprocess a source file
+Utils/IconLoader.cpp.i:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Utils/IconLoader.cpp.i
+.PHONY : Utils/IconLoader.cpp.i
+
+Utils/IconLoader.s: Utils/IconLoader.cpp.s
+
+.PHONY : Utils/IconLoader.s
+
+# target to generate assembly for a file
+Utils/IconLoader.cpp.s:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Utils/IconLoader.cpp.s
+.PHONY : Utils/IconLoader.cpp.s
 
 Utils/NetWatchWin.o: Utils/NetWatchWin.cpp.o
 
@@ -2013,6 +1986,33 @@ Views/MainWindow.cpp.s:
 	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Views/MainWindow.cpp.s
 .PHONY : Views/MainWindow.cpp.s
 
+Views/MainWindowUIFilter.o: Views/MainWindowUIFilter.cpp.o
+
+.PHONY : Views/MainWindowUIFilter.o
+
+# target to build an object file
+Views/MainWindowUIFilter.cpp.o:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Views/MainWindowUIFilter.cpp.o
+.PHONY : Views/MainWindowUIFilter.cpp.o
+
+Views/MainWindowUIFilter.i: Views/MainWindowUIFilter.cpp.i
+
+.PHONY : Views/MainWindowUIFilter.i
+
+# target to preprocess a source file
+Views/MainWindowUIFilter.cpp.i:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Views/MainWindowUIFilter.cpp.i
+.PHONY : Views/MainWindowUIFilter.cpp.i
+
+Views/MainWindowUIFilter.s: Views/MainWindowUIFilter.cpp.s
+
+.PHONY : Views/MainWindowUIFilter.s
+
+# target to generate assembly for a file
+Views/MainWindowUIFilter.cpp.s:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Views/MainWindowUIFilter.cpp.s
+.PHONY : Views/MainWindowUIFilter.cpp.s
+
 Views/MessageItem.o: Views/MessageItem.cpp.o
 
 .PHONY : Views/MessageItem.o
@@ -2484,18 +2484,6 @@ help:
 	@echo "... BmeApp.o"
 	@echo "... BmeApp.i"
 	@echo "... BmeApp.s"
-	@echo "... Common.o"
-	@echo "... Common.i"
-	@echo "... Common.s"
-	@echo "... IconLoader.o"
-	@echo "... IconLoader.i"
-	@echo "... IconLoader.s"
-	@echo "... IconTheme.o"
-	@echo "... IconTheme.i"
-	@echo "... IconTheme.s"
-	@echo "... MainWindowUIFilter.o"
-	@echo "... MainWindowUIFilter.i"
-	@echo "... MainWindowUIFilter.s"
 	@echo "... Models/AuthenticationHandler.o"
 	@echo "... Models/AuthenticationHandler.i"
 	@echo "... Models/AuthenticationHandler.s"
@@ -2532,15 +2520,24 @@ help:
 	@echo "... Models/Group.o"
 	@echo "... Models/Group.i"
 	@echo "... Models/Group.s"
+	@echo "... Models/IconTheme.o"
+	@echo "... Models/IconTheme.i"
+	@echo "... Models/IconTheme.s"
 	@echo "... Models/PingHandler.o"
 	@echo "... Models/PingHandler.i"
 	@echo "... Models/PingHandler.s"
+	@echo "... Models/PreferenceFactory.o"
+	@echo "... Models/PreferenceFactory.i"
+	@echo "... Models/PreferenceFactory.s"
 	@echo "... Models/Preferences.o"
 	@echo "... Models/Preferences.i"
 	@echo "... Models/Preferences.s"
 	@echo "... Models/PreferencesHandler.o"
 	@echo "... Models/PreferencesHandler.i"
 	@echo "... Models/PreferencesHandler.s"
+	@echo "... Models/PrefsMethods.o"
+	@echo "... Models/PrefsMethods.i"
+	@echo "... Models/PrefsMethods.s"
 	@echo "... Models/ProtocolHandler.o"
 	@echo "... Models/ProtocolHandler.i"
 	@echo "... Models/ProtocolHandler.s"
@@ -2601,18 +2598,18 @@ help:
 	@echo "... Models/UserInfoHandler.o"
 	@echo "... Models/UserInfoHandler.i"
 	@echo "... Models/UserInfoHandler.s"
-	@echo "... PreferenceFactory.o"
-	@echo "... PreferenceFactory.i"
-	@echo "... PreferenceFactory.s"
-	@echo "... PrefsMethods.o"
-	@echo "... PrefsMethods.i"
-	@echo "... PrefsMethods.s"
 	@echo "... Utils/BitmapUtils.o"
 	@echo "... Utils/BitmapUtils.i"
 	@echo "... Utils/BitmapUtils.s"
+	@echo "... Utils/Common.o"
+	@echo "... Utils/Common.i"
+	@echo "... Utils/Common.s"
 	@echo "... Utils/HTTPFormatter.o"
 	@echo "... Utils/HTTPFormatter.i"
 	@echo "... Utils/HTTPFormatter.s"
+	@echo "... Utils/IconLoader.o"
+	@echo "... Utils/IconLoader.i"
+	@echo "... Utils/IconLoader.s"
 	@echo "... Utils/NetWatchWin.o"
 	@echo "... Utils/NetWatchWin.i"
 	@echo "... Utils/NetWatchWin.s"
@@ -2691,6 +2688,9 @@ help:
 	@echo "... Views/MainWindow.o"
 	@echo "... Views/MainWindow.i"
 	@echo "... Views/MainWindow.s"
+	@echo "... Views/MainWindowUIFilter.o"
+	@echo "... Views/MainWindowUIFilter.i"
+	@echo "... Views/MainWindowUIFilter.s"
 	@echo "... Views/MessageItem.o"
 	@echo "... Views/MessageItem.i"
 	@echo "... Views/MessageItem.s"
