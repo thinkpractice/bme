@@ -19,11 +19,13 @@ file(GLOB BmeSrc
 "Models/Protocols/*.cpp"
 "Views/*.h"
 "Views/*.cpp"
+"Views/MessageItemViews/*.h"
+"Views/MessageItemViews/*.cpp"
 "Utils/*.h"
 "Utils/*.cpp"
 )
 
-set( ProjectIncludes "." "Controllers" "Models" "Models/Protocols" "Views" "Utils")
+set( ProjectIncludes "." "Controllers" "Models" "Models/Protocols" "Views" "Views/MessageItemViews" "Utils")
 include_directories(${ProjectIncludes})
 
 link_directories("/boot/system/lib/x86")

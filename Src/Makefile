@@ -1581,33 +1581,6 @@ Views/ButtonDecorator.cpp.s:
 	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Views/ButtonDecorator.cpp.s
 .PHONY : Views/ButtonDecorator.cpp.s
 
-Views/ChatMessageItem.o: Views/ChatMessageItem.cpp.o
-
-.PHONY : Views/ChatMessageItem.o
-
-# target to build an object file
-Views/ChatMessageItem.cpp.o:
-	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Views/ChatMessageItem.cpp.o
-.PHONY : Views/ChatMessageItem.cpp.o
-
-Views/ChatMessageItem.i: Views/ChatMessageItem.cpp.i
-
-.PHONY : Views/ChatMessageItem.i
-
-# target to preprocess a source file
-Views/ChatMessageItem.cpp.i:
-	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Views/ChatMessageItem.cpp.i
-.PHONY : Views/ChatMessageItem.cpp.i
-
-Views/ChatMessageItem.s: Views/ChatMessageItem.cpp.s
-
-.PHONY : Views/ChatMessageItem.s
-
-# target to generate assembly for a file
-Views/ChatMessageItem.cpp.s:
-	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Views/ChatMessageItem.cpp.s
-.PHONY : Views/ChatMessageItem.cpp.s
-
 Views/ChatWindow.o: Views/ChatWindow.cpp.o
 
 .PHONY : Views/ChatWindow.o
@@ -1905,33 +1878,6 @@ Views/EditableStringView.cpp.s:
 	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Views/EditableStringView.cpp.s
 .PHONY : Views/EditableStringView.cpp.s
 
-Views/FileMessageItem.o: Views/FileMessageItem.cpp.o
-
-.PHONY : Views/FileMessageItem.o
-
-# target to build an object file
-Views/FileMessageItem.cpp.o:
-	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Views/FileMessageItem.cpp.o
-.PHONY : Views/FileMessageItem.cpp.o
-
-Views/FileMessageItem.i: Views/FileMessageItem.cpp.i
-
-.PHONY : Views/FileMessageItem.i
-
-# target to preprocess a source file
-Views/FileMessageItem.cpp.i:
-	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Views/FileMessageItem.cpp.i
-.PHONY : Views/FileMessageItem.cpp.i
-
-Views/FileMessageItem.s: Views/FileMessageItem.cpp.s
-
-.PHONY : Views/FileMessageItem.s
-
-# target to generate assembly for a file
-Views/FileMessageItem.cpp.s:
-	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Views/FileMessageItem.cpp.s
-.PHONY : Views/FileMessageItem.cpp.s
-
 Views/GradientView.o: Views/GradientView.cpp.o
 
 .PHONY : Views/GradientView.o
@@ -2067,33 +2013,6 @@ Views/MainWindowUIFilter.cpp.s:
 	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Views/MainWindowUIFilter.cpp.s
 .PHONY : Views/MainWindowUIFilter.cpp.s
 
-Views/MessageItem.o: Views/MessageItem.cpp.o
-
-.PHONY : Views/MessageItem.o
-
-# target to build an object file
-Views/MessageItem.cpp.o:
-	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Views/MessageItem.cpp.o
-.PHONY : Views/MessageItem.cpp.o
-
-Views/MessageItem.i: Views/MessageItem.cpp.i
-
-.PHONY : Views/MessageItem.i
-
-# target to preprocess a source file
-Views/MessageItem.cpp.i:
-	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Views/MessageItem.cpp.i
-.PHONY : Views/MessageItem.cpp.i
-
-Views/MessageItem.s: Views/MessageItem.cpp.s
-
-.PHONY : Views/MessageItem.s
-
-# target to generate assembly for a file
-Views/MessageItem.cpp.s:
-	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Views/MessageItem.cpp.s
-.PHONY : Views/MessageItem.cpp.s
-
 Views/NetListItem.o: Views/NetListItem.cpp.o
 
 .PHONY : Views/NetListItem.o
@@ -2174,33 +2093,6 @@ Views/NotificationWindow.s: Views/NotificationWindow.cpp.s
 Views/NotificationWindow.cpp.s:
 	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Views/NotificationWindow.cpp.s
 .PHONY : Views/NotificationWindow.cpp.s
-
-Views/NudgeMessageItem.o: Views/NudgeMessageItem.cpp.o
-
-.PHONY : Views/NudgeMessageItem.o
-
-# target to build an object file
-Views/NudgeMessageItem.cpp.o:
-	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Views/NudgeMessageItem.cpp.o
-.PHONY : Views/NudgeMessageItem.cpp.o
-
-Views/NudgeMessageItem.i: Views/NudgeMessageItem.cpp.i
-
-.PHONY : Views/NudgeMessageItem.i
-
-# target to preprocess a source file
-Views/NudgeMessageItem.cpp.i:
-	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Views/NudgeMessageItem.cpp.i
-.PHONY : Views/NudgeMessageItem.cpp.i
-
-Views/NudgeMessageItem.s: Views/NudgeMessageItem.cpp.s
-
-.PHONY : Views/NudgeMessageItem.s
-
-# target to generate assembly for a file
-Views/NudgeMessageItem.cpp.s:
-	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Views/NudgeMessageItem.cpp.s
-.PHONY : Views/NudgeMessageItem.cpp.s
 
 Views/PrefsWindow.o: Views/PrefsWindow.cpp.o
 
@@ -2499,33 +2391,6 @@ Views/UserPictView.cpp.s:
 	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Views/UserPictView.cpp.s
 .PHONY : Views/UserPictView.cpp.s
 
-Views/WarningMessageItem.o: Views/WarningMessageItem.cpp.o
-
-.PHONY : Views/WarningMessageItem.o
-
-# target to build an object file
-Views/WarningMessageItem.cpp.o:
-	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Views/WarningMessageItem.cpp.o
-.PHONY : Views/WarningMessageItem.cpp.o
-
-Views/WarningMessageItem.i: Views/WarningMessageItem.cpp.i
-
-.PHONY : Views/WarningMessageItem.i
-
-# target to preprocess a source file
-Views/WarningMessageItem.cpp.i:
-	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Views/WarningMessageItem.cpp.i
-.PHONY : Views/WarningMessageItem.cpp.i
-
-Views/WarningMessageItem.s: Views/WarningMessageItem.cpp.s
-
-.PHONY : Views/WarningMessageItem.s
-
-# target to generate assembly for a file
-Views/WarningMessageItem.cpp.s:
-	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Views/WarningMessageItem.cpp.s
-.PHONY : Views/WarningMessageItem.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -2697,9 +2562,6 @@ help:
 	@echo "... Views/ButtonDecorator.o"
 	@echo "... Views/ButtonDecorator.i"
 	@echo "... Views/ButtonDecorator.s"
-	@echo "... Views/ChatMessageItem.o"
-	@echo "... Views/ChatMessageItem.i"
-	@echo "... Views/ChatMessageItem.s"
 	@echo "... Views/ChatWindow.o"
 	@echo "... Views/ChatWindow.i"
 	@echo "... Views/ChatWindow.s"
@@ -2733,9 +2595,6 @@ help:
 	@echo "... Views/EditableStringView.o"
 	@echo "... Views/EditableStringView.i"
 	@echo "... Views/EditableStringView.s"
-	@echo "... Views/FileMessageItem.o"
-	@echo "... Views/FileMessageItem.i"
-	@echo "... Views/FileMessageItem.s"
 	@echo "... Views/GradientView.o"
 	@echo "... Views/GradientView.i"
 	@echo "... Views/GradientView.s"
@@ -2751,9 +2610,6 @@ help:
 	@echo "... Views/MainWindowUIFilter.o"
 	@echo "... Views/MainWindowUIFilter.i"
 	@echo "... Views/MainWindowUIFilter.s"
-	@echo "... Views/MessageItem.o"
-	@echo "... Views/MessageItem.i"
-	@echo "... Views/MessageItem.s"
 	@echo "... Views/NetListItem.o"
 	@echo "... Views/NetListItem.i"
 	@echo "... Views/NetListItem.s"
@@ -2763,9 +2619,6 @@ help:
 	@echo "... Views/NotificationWindow.o"
 	@echo "... Views/NotificationWindow.i"
 	@echo "... Views/NotificationWindow.s"
-	@echo "... Views/NudgeMessageItem.o"
-	@echo "... Views/NudgeMessageItem.i"
-	@echo "... Views/NudgeMessageItem.s"
 	@echo "... Views/PrefsWindow.o"
 	@echo "... Views/PrefsWindow.i"
 	@echo "... Views/PrefsWindow.s"
@@ -2799,9 +2652,6 @@ help:
 	@echo "... Views/UserPictView.o"
 	@echo "... Views/UserPictView.i"
 	@echo "... Views/UserPictView.s"
-	@echo "... Views/WarningMessageItem.o"
-	@echo "... Views/WarningMessageItem.i"
-	@echo "... Views/WarningMessageItem.s"
 .PHONY : help
 
 
