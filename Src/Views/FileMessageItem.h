@@ -6,7 +6,7 @@
 class FileMessageItem : public MessageItem
 {
 	public:
-		FileMessageItem(ConvMessage* message);
+		FileMessageItem(ChatMessage* message);
 		virtual				~FileMessageItem();
 		
 		virtual void 		DrawItem(BView* owner, BRect itemRect, bool drawEverything = false);

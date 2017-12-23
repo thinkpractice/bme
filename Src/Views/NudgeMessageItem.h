@@ -6,7 +6,7 @@
 class NudgeMessageItem : public MessageItem
 {
 	public:
-		NudgeMessageItem(ConvMessage* message);
+		NudgeMessageItem(ChatMessage* message);
 		virtual				~NudgeMessageItem();
 		
 		virtual void 		DrawItem(BView* owner, BRect itemRect, bool drawEverything = false);

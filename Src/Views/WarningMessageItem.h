@@ -6,7 +6,7 @@
 class WarningMessageItem : public MessageItem
 {
 	public:
-		WarningMessageItem(ConvMessage* message);
+		WarningMessageItem(ChatMessage* message);
 		virtual				~WarningMessageItem();
 		
 		virtual void 		DrawItem(BView* owner, BRect itemRect, bool drawEverything = false);

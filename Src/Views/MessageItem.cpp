@@ -2,9 +2,9 @@
 #include "MessageItem.h"
 #endif
 
-#include "ConvMessage.h"
+#include "ChatMessage.h"
 
-MessageItem::MessageItem(ConvMessage* message)
+MessageItem::MessageItem(ChatMessage* message)
 				:	m_message(message)
 {
 }
@@ -14,12 +14,12 @@ MessageItem::~MessageItem()
 	delete m_message;
 }
 
-ConvMessage* MessageItem::Message()
+ChatMessage* MessageItem::Message()
 {
 	return m_message;
 }
 					
-void MessageItem::SetMessage(ConvMessage* message)
+void MessageItem::SetMessage(ChatMessage* message)
 {
 	if (m_message)
 	{

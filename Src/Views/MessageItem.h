@@ -2,21 +2,21 @@
 #define MESSAGE_ITEM_H
 
 #include <interface/ListItem.h>
-class ConvMessage;
+class ChatMessage;
 
 class MessageItem : public BListItem
 {
 	public:
-		MessageItem(ConvMessage* message);
+		MessageItem(ChatMessage* message);
 		virtual				~MessageItem();
 
-		ConvMessage*		Message();					
-		virtual	void		SetMessage(ConvMessage* message);		
+		ChatMessage*		Message();					
+		virtual	void		SetMessage(ChatMessage* message);		
 		virtual void 		DrawItem(BView* owner, BRect itemRect, bool drawEverything = false) = 0;
 		virtual void 		Update(BView* owner, const BFont* font) = 0;
 		
 	private:
-		ConvMessage*		m_message;		
+		ChatMessage*		m_message;		
 };
 
 #endif

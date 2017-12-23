@@ -8,7 +8,7 @@
 class ChatMessageItem : public MessageItem
 {
 	public:
-		ChatMessageItem(ConvMessage* message, bool followUp = false);
+		ChatMessageItem(ChatMessage* message, bool followUp = false);
 		virtual				~ChatMessageItem();
 		
 		virtual void 		DrawItem(BView* owner, BRect itemRect, bool drawEverything = false);

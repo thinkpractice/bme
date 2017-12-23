@@ -2,7 +2,7 @@
 #include "WarningMessageItem.h"
 #endif
 
-WarningMessageItem::WarningMessageItem(ConvMessage* message)
+WarningMessageItem::WarningMessageItem(ChatMessage* message)
 						:	MessageItem(message)
 {
 }

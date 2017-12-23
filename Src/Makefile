@@ -366,33 +366,6 @@ Models/ContactListHandler.cpp.s:
 	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Models/ContactListHandler.cpp.s
 .PHONY : Models/ContactListHandler.cpp.s
 
-Models/ConvMessage.o: Models/ConvMessage.cpp.o
-
-.PHONY : Models/ConvMessage.o
-
-# target to build an object file
-Models/ConvMessage.cpp.o:
-	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Models/ConvMessage.cpp.o
-.PHONY : Models/ConvMessage.cpp.o
-
-Models/ConvMessage.i: Models/ConvMessage.cpp.i
-
-.PHONY : Models/ConvMessage.i
-
-# target to preprocess a source file
-Models/ConvMessage.cpp.i:
-	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Models/ConvMessage.cpp.i
-.PHONY : Models/ConvMessage.cpp.i
-
-Models/ConvMessage.s: Models/ConvMessage.cpp.s
-
-.PHONY : Models/ConvMessage.s
-
-# target to generate assembly for a file
-Models/ConvMessage.cpp.s:
-	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Models/ConvMessage.cpp.s
-.PHONY : Models/ConvMessage.cpp.s
-
 Models/Emoticon.o: Models/Emoticon.cpp.o
 
 .PHONY : Models/Emoticon.o
@@ -743,6 +716,33 @@ Models/ProtocolLooper.s: Models/ProtocolLooper.cpp.s
 Models/ProtocolLooper.cpp.s:
 	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Models/ProtocolLooper.cpp.s
 .PHONY : Models/ProtocolLooper.cpp.s
+
+Models/Protocols/MsnMessage.o: Models/Protocols/MsnMessage.cpp.o
+
+.PHONY : Models/Protocols/MsnMessage.o
+
+# target to build an object file
+Models/Protocols/MsnMessage.cpp.o:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Models/Protocols/MsnMessage.cpp.o
+.PHONY : Models/Protocols/MsnMessage.cpp.o
+
+Models/Protocols/MsnMessage.i: Models/Protocols/MsnMessage.cpp.i
+
+.PHONY : Models/Protocols/MsnMessage.i
+
+# target to preprocess a source file
+Models/Protocols/MsnMessage.cpp.i:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Models/Protocols/MsnMessage.cpp.i
+.PHONY : Models/Protocols/MsnMessage.cpp.i
+
+Models/Protocols/MsnMessage.s: Models/Protocols/MsnMessage.cpp.s
+
+.PHONY : Models/Protocols/MsnMessage.s
+
+# target to generate assembly for a file
+Models/Protocols/MsnMessage.cpp.s:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Models/Protocols/MsnMessage.cpp.s
+.PHONY : Models/Protocols/MsnMessage.cpp.s
 
 Models/Protocols/MsnObject.o: Models/Protocols/MsnObject.cpp.o
 
@@ -2562,9 +2562,6 @@ help:
 	@echo "... Models/ContactListHandler.o"
 	@echo "... Models/ContactListHandler.i"
 	@echo "... Models/ContactListHandler.s"
-	@echo "... Models/ConvMessage.o"
-	@echo "... Models/ConvMessage.i"
-	@echo "... Models/ConvMessage.s"
 	@echo "... Models/Emoticon.o"
 	@echo "... Models/Emoticon.i"
 	@echo "... Models/Emoticon.s"
@@ -2604,6 +2601,9 @@ help:
 	@echo "... Models/ProtocolLooper.o"
 	@echo "... Models/ProtocolLooper.i"
 	@echo "... Models/ProtocolLooper.s"
+	@echo "... Models/Protocols/MsnMessage.o"
+	@echo "... Models/Protocols/MsnMessage.i"
+	@echo "... Models/Protocols/MsnMessage.s"
 	@echo "... Models/Protocols/MsnObject.o"
 	@echo "... Models/Protocols/MsnObject.i"
 	@echo "... Models/Protocols/MsnObject.s"

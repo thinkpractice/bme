@@ -2,7 +2,7 @@
 #include "FileMessageItem.h"
 #endif
 
-FileMessageItem::FileMessageItem(ConvMessage* message)
+FileMessageItem::FileMessageItem(ChatMessage* message)
 						:	MessageItem(message)
 {
 }

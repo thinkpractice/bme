@@ -2,7 +2,7 @@
 #include "NudgeMessageItem.h"
 #endif
 
-NudgeMessageItem::NudgeMessageItem(ConvMessage* message)
+NudgeMessageItem::NudgeMessageItem(ChatMessage* message)
 						:	MessageItem(message)
 {
 }

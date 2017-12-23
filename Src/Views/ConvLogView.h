@@ -63,7 +63,7 @@ class ConvLogView : public BListView
 		vector <URLInfo*>				m_urlInfoList;
 		vector <BBitmap*>				m_emoticonList;*/
     private:
-        ScrollToLastItem();
+         void ScrollToLastItem();
 };
 
 #endif

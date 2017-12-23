@@ -23,33 +23,33 @@
 
 class ChatWindow : public BWindow
 {
-	public:
-		ChatWindow(BRect frame);
-		virtual				~ChatWindow();
-		
-		void				SetOwner(BMessenger owner);
-				
-		virtual void		MessageReceived(BMessage *message);
-		virtual bool		QuitRequested();
-		
-		void				AddContact(Contact *contact);
-		void				RemoveContact(BString contactPassport);
-		
-	private:
-		ConvLogView			*m_convLogView;
-		BTextView			*m_convTextView;
-		BListView			*m_contactDetailsView;
+    public:
+        ChatWindow(BRect frame);
+        virtual				~ChatWindow();
 
-		BScrollView 		*m_convScroll,
-							*m_convTextScroll,
-							*m_contactScroll;
-							
-		WToolbar			*m_toolbarView;
-		ContactPictureView	*m_contactPictureView;
-		
-		BMessenger			m_owner;
-		
-		bool				m_firstMessage;
+        void				SetOwner(BMessenger owner);
+
+        virtual void		MessageReceived(BMessage *message);
+        virtual bool		QuitRequested();
+
+        void				AddContact(Contact *contact);
+        void				RemoveContact(BString contactPassport);
+
+    private:
+        ConvLogView			*m_convLogView;
+        BTextView			*m_convTextView;
+        BListView			*m_contactDetailsView;
+
+        BScrollView 		*m_convScroll,
+                            *m_convTextScroll,
+                            *m_contactScroll;
+
+        WToolbar			*m_toolbarView;
+        ContactPictureView	*m_contactPictureView;
+
+        BMessenger			m_owner;
+
+        bool				m_firstMessage;
 };
 
 #endif

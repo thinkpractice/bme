@@ -156,7 +156,7 @@ void ChatWindow::MessageReceived(BMessage *message)
 			
 			
 			Contact* userContact = new Contact("obelmiks@hotmail.com","Tim", "",0,statusses["FLN"]);
-			ConvMessage *userTextMessage = new ConvMessage(userContact);
+			ChatMessage *userTextMessage = new ChatMessage(userContact, "");
 			m_convLogView->AddMessage(userTextMessage);
 			
 			m_convTextView->SetText("");

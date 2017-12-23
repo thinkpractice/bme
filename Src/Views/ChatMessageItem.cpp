@@ -7,14 +7,14 @@
 #include <interface/View.h>
 #include <interface/Window.h>
 #include <translation/TranslationUtils.h>
-#include "ConvMessage.h"
+#include "ChatMessage.h"
 #include "Contact.h"
 #include "TextTag.h"
 #include "EmoticonTag.h"
 
 using namespace std;
 
-ChatMessageItem::ChatMessageItem(ConvMessage* message, bool followUp)
+ChatMessageItem::ChatMessageItem(ChatMessage* message, bool followUp)
 						:	MessageItem(message),
 							m_followUp(followUp),	
 							m_lineBuffer(NULL)
@@ -51,7 +51,7 @@ void ChatMessageItem::DrawItem(BView* owner, BRect itemRect, bool drawEverything
 	bigtime_t startTime = real_time_clock_usecs();
 	if(owner->Window()->LockLooper())
 	{
-		ConvMessage *message = Message();	
+		ChatMessage *message = Message();	
 		bigtime_t startWrapTime = real_time_clock_usecs();
 		TextWrapper wrapper(owner,TextWrapper::K_WIDTH_FIXED);
 		bigtime_t endWrapTime = real_time_clock_usecs();
