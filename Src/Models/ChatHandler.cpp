@@ -41,15 +41,15 @@ void ChatHandler::LeftConversation(Contact *contact)
 {
 }
 
-void ChatHandler::SendMessage(ChatMessage chatMessage)
+void ChatHandler::SendMessage(const ChatMessage& chatMessage)
 {
 	BMessage *message = new BMessage(ProtocolConstants::K_ADD_COMMAND_MESSAGE);
 	message->AddString(K_COMMAND, SwitchboardMessages::K_SWITCHBOARD_MESSAGE);
 	message->AddString(K_REMAINING_MSG, AckTypes::K_NEGATIVE_ACK_TYPE);
 	
-	BString payloadData = chatMessage.String();				
-	message->AddInt32(K_PAYLOAD_SIZE, payloadData.Length());
-	message->AddString(K_PAYLOAD_DATA, payloadData);
+//BString payloadData = chatMessage.String();				
+//message->AddInt32(K_PAYLOAD_SIZE, payloadData.Length());
+//message->AddString(K_PAYLOAD_DATA, payloadData);
 	//TODO: build in acknowledgement
 	SendCommandMessageTrID(message);
 }
@@ -68,10 +68,9 @@ void ChatHandler::MessageReceived(BMessage *message)
 			BString messageText;
 			if (message->FindString(K_MESSAGE_TEXT, &messageText) == B_OK)
 			{
-				ChatMessage chatMsg;
-				chatMsg.SetMessageText(messageText);
-				SendMessage(chatMsg);
-			}		
+//ChatMessage chatMsg(NULL, chatMsg);
+//SendMessage(chatMsg);
+			}
 		}
 		break;
 		case InterfaceMessages::K_USER_QUIT_CONV_MSG: 

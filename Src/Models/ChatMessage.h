@@ -3,25 +3,28 @@
 
 #include <app/Message.h>
 #include <support/String.h>
-#include "ProtocolMessage.h"
 
-class ChatMessage : public ProtocolMessage
+class Contact;
+
+class ChatMessage
 {
-	public:
-		ChatMessage();
-		ChatMessage(BMessage *archive);
-		virtual				~ChatMessage();
-			
-		void				SetMessageText(const BString& messageText);
-		BString				GetMessageText();
-	
-		BString				String();
-		
-	protected:
-		void				ParsePayload(BString payloadMsg);
-	
-	private:
-		BString				m_messageText;
+    public:
+        ChatMessage(Contact* contact, const BString& messageText);
+        ChatMessage(const ChatMessage& chatMessage);
+        ChatMessage(BMessage *archive);
+        virtual ~ChatMessage();
+        
+        Contact* Sender() const;
+
+        void SetText(const BString& messageText);
+        BString GetText() const;
+
+        bigtime_t Timestamp();
+        void SetTimeStamp(bigtime_t timestamp);
+    private:
+        BString _messageText;
+        bigtime_t _timestamp;
+        Contact* _sender;
 };
 
 #endif

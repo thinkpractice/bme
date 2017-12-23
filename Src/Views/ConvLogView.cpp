@@ -30,21 +30,21 @@ ConvLogView::~ConvLogView()
 
 void ConvLogView::MessageReceived(BMessage *message)
 {
-	switch(message->what)
-	{		
-		case InterfaceMessages::K_ADD_CHAT_TEXT:
-		{
-			//get text message
-			
-			//get emoticons from message and and them to the emoticonlist
-			
-			//get url from message and add them to urlInfoList
-		}
-		break;
-		default:
-			BListView::MessageReceived(message);
-		break;
-	}
+    switch(message->what)
+    {
+        case InterfaceMessages::K_ADD_CHAT_TEXT:
+        {
+            //get text message
+            
+            //get emoticons from message and and them to the emoticonlist
+            
+            //get url from message and add them to urlInfoList
+        }
+        break;
+        default:
+            BListView::MessageReceived(message);
+        break;
+    }
 }
 
 void ConvLogView::MouseMoved(BPoint point, uint32 transit, const BMessage *message)
@@ -107,39 +107,37 @@ void ConvLogView::MouseDown(BPoint point)
 	BListView::MouseDown(point);
 }
 
-void ConvLogView::AddMessage(ConvMessage *message)
+void ConvLogView::AddMessage(ChatMessage *message)
 {
-	bool followUp = false;
-	//add a new message
-	if (CountItems() > 0)
-	{
-		MessageItem *lastMessageItem  = dynamic_cast<MessageItem*>(LastItem());
-		Contact *lastContact = lastMessageItem->Message()->Sender();
-		Contact *messageContact = message->Sender();
-	
-		if (lastContact->Passport() == messageContact->Passport())
-		{
-			followUp = true;
-		}		
-	}
-	
-	if (followUp)
-	{
-			//the contact of the new message is the same as the contact of the last message
-			//therefore, treat the message as a follow up
-			ChatMessageItem *chatItem = new ChatMessageItem(message, true);
-			AddItem(chatItem);
-	}
-	else
-	{
-		ChatMessageItem *chatItem = new ChatMessageItem(message, false);			
-		AddItem(chatItem);
-	}
-	//scroll to last item in list
-	int32 lastItemIndex = CountItems() - 1; 
-	Select(lastItemIndex);
-	ScrollToSelection();
+    bool followUp = false;
+    //add a new message
+    if (CountItems() > 0)
+    {
+        MessageItem *lastMessageItem  = dynamic_cast<MessageItem*>(LastItem());
+        Contact *lastContact = lastMessageItem->Message()->Sender();
+        Contact *messageContact = message->Sender();
+
+        if (lastContact->Passport() == messageContact->Passport())
+        {
+            followUp = true;
+        }
+    }
+
+    //the contact of the new message is the same as the contact of the last message
+    //therefore, treat the message as a follow up
+    ChatMessageItem *chatItem = new ChatMessageItem(message, followUp);
+    AddItem(chatItem);
+    ScrollToLastItem();
 }
+
+void ConvLogView::ScrollToLastItem()
+{
+    //scroll to last item in list
+    int32 lastItemIndex = CountItems() - 1; 
+    Select(lastItemIndex);
+    ScrollToSelection();
+}
+
 
 /*//=========================ConvLogView::URLInfo===============================
 ConvLogView::URLInfo::URLInfo(int32 start, int32 end, BString href) 

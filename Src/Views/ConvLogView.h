@@ -14,7 +14,7 @@
 #include <interface/Bitmap.h>
 #include <support/String.h>
 #include <vector>
-#include "ConvMessage.h"
+#include "ChatMessage.h"
 
 using namespace std;
 
@@ -28,7 +28,7 @@ class ConvLogView : public BListView
 		virtual void		MouseMoved(BPoint point, uint32 transit, const BMessage *message);
 		virtual void		MouseDown(BPoint point);		
 				
-		void				AddMessage(ConvMessage *message);		
+		void				AddMessage(ChatMessage *message);		
 		void				ChangeStatus(BString);
 		
 	protected:
@@ -62,6 +62,8 @@ class ConvLogView : public BListView
 	protected:	
 		vector <URLInfo*>				m_urlInfoList;
 		vector <BBitmap*>				m_emoticonList;*/
+    private:
+        ScrollToLastItem();
 };
 
 #endif

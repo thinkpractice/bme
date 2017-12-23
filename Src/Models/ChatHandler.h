@@ -24,7 +24,7 @@ class ChatHandler : public ServerHandler
 		void				ContactJoined(Contact* contact);
 		void				LeftConversation(Contact *contact);
 		
-		void				SendMessage(ChatMessage message);
+		void				SendMessage(const ChatMessage& message);
 		void				ReceivedMessage(Contact* contact, ChatMessage message);	
 };
 

@@ -1,9 +1,9 @@
 #include <property.h>
 
-Property::Property()
+property::property()
 {
 }
 
-virtual Property:~Property()
+property::~property()
 {
 }
