@@ -2013,6 +2013,141 @@ Views/MainWindowUIFilter.cpp.s:
 	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Views/MainWindowUIFilter.cpp.s
 .PHONY : Views/MainWindowUIFilter.cpp.s
 
+Views/MessageItemViews/ChatMessageItem.o: Views/MessageItemViews/ChatMessageItem.cpp.o
+
+.PHONY : Views/MessageItemViews/ChatMessageItem.o
+
+# target to build an object file
+Views/MessageItemViews/ChatMessageItem.cpp.o:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Views/MessageItemViews/ChatMessageItem.cpp.o
+.PHONY : Views/MessageItemViews/ChatMessageItem.cpp.o
+
+Views/MessageItemViews/ChatMessageItem.i: Views/MessageItemViews/ChatMessageItem.cpp.i
+
+.PHONY : Views/MessageItemViews/ChatMessageItem.i
+
+# target to preprocess a source file
+Views/MessageItemViews/ChatMessageItem.cpp.i:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Views/MessageItemViews/ChatMessageItem.cpp.i
+.PHONY : Views/MessageItemViews/ChatMessageItem.cpp.i
+
+Views/MessageItemViews/ChatMessageItem.s: Views/MessageItemViews/ChatMessageItem.cpp.s
+
+.PHONY : Views/MessageItemViews/ChatMessageItem.s
+
+# target to generate assembly for a file
+Views/MessageItemViews/ChatMessageItem.cpp.s:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Views/MessageItemViews/ChatMessageItem.cpp.s
+.PHONY : Views/MessageItemViews/ChatMessageItem.cpp.s
+
+Views/MessageItemViews/FileMessageItem.o: Views/MessageItemViews/FileMessageItem.cpp.o
+
+.PHONY : Views/MessageItemViews/FileMessageItem.o
+
+# target to build an object file
+Views/MessageItemViews/FileMessageItem.cpp.o:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Views/MessageItemViews/FileMessageItem.cpp.o
+.PHONY : Views/MessageItemViews/FileMessageItem.cpp.o
+
+Views/MessageItemViews/FileMessageItem.i: Views/MessageItemViews/FileMessageItem.cpp.i
+
+.PHONY : Views/MessageItemViews/FileMessageItem.i
+
+# target to preprocess a source file
+Views/MessageItemViews/FileMessageItem.cpp.i:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Views/MessageItemViews/FileMessageItem.cpp.i
+.PHONY : Views/MessageItemViews/FileMessageItem.cpp.i
+
+Views/MessageItemViews/FileMessageItem.s: Views/MessageItemViews/FileMessageItem.cpp.s
+
+.PHONY : Views/MessageItemViews/FileMessageItem.s
+
+# target to generate assembly for a file
+Views/MessageItemViews/FileMessageItem.cpp.s:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Views/MessageItemViews/FileMessageItem.cpp.s
+.PHONY : Views/MessageItemViews/FileMessageItem.cpp.s
+
+Views/MessageItemViews/MessageItem.o: Views/MessageItemViews/MessageItem.cpp.o
+
+.PHONY : Views/MessageItemViews/MessageItem.o
+
+# target to build an object file
+Views/MessageItemViews/MessageItem.cpp.o:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Views/MessageItemViews/MessageItem.cpp.o
+.PHONY : Views/MessageItemViews/MessageItem.cpp.o
+
+Views/MessageItemViews/MessageItem.i: Views/MessageItemViews/MessageItem.cpp.i
+
+.PHONY : Views/MessageItemViews/MessageItem.i
+
+# target to preprocess a source file
+Views/MessageItemViews/MessageItem.cpp.i:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Views/MessageItemViews/MessageItem.cpp.i
+.PHONY : Views/MessageItemViews/MessageItem.cpp.i
+
+Views/MessageItemViews/MessageItem.s: Views/MessageItemViews/MessageItem.cpp.s
+
+.PHONY : Views/MessageItemViews/MessageItem.s
+
+# target to generate assembly for a file
+Views/MessageItemViews/MessageItem.cpp.s:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Views/MessageItemViews/MessageItem.cpp.s
+.PHONY : Views/MessageItemViews/MessageItem.cpp.s
+
+Views/MessageItemViews/NudgeMessageItem.o: Views/MessageItemViews/NudgeMessageItem.cpp.o
+
+.PHONY : Views/MessageItemViews/NudgeMessageItem.o
+
+# target to build an object file
+Views/MessageItemViews/NudgeMessageItem.cpp.o:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Views/MessageItemViews/NudgeMessageItem.cpp.o
+.PHONY : Views/MessageItemViews/NudgeMessageItem.cpp.o
+
+Views/MessageItemViews/NudgeMessageItem.i: Views/MessageItemViews/NudgeMessageItem.cpp.i
+
+.PHONY : Views/MessageItemViews/NudgeMessageItem.i
+
+# target to preprocess a source file
+Views/MessageItemViews/NudgeMessageItem.cpp.i:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Views/MessageItemViews/NudgeMessageItem.cpp.i
+.PHONY : Views/MessageItemViews/NudgeMessageItem.cpp.i
+
+Views/MessageItemViews/NudgeMessageItem.s: Views/MessageItemViews/NudgeMessageItem.cpp.s
+
+.PHONY : Views/MessageItemViews/NudgeMessageItem.s
+
+# target to generate assembly for a file
+Views/MessageItemViews/NudgeMessageItem.cpp.s:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Views/MessageItemViews/NudgeMessageItem.cpp.s
+.PHONY : Views/MessageItemViews/NudgeMessageItem.cpp.s
+
+Views/MessageItemViews/WarningMessageItem.o: Views/MessageItemViews/WarningMessageItem.cpp.o
+
+.PHONY : Views/MessageItemViews/WarningMessageItem.o
+
+# target to build an object file
+Views/MessageItemViews/WarningMessageItem.cpp.o:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Views/MessageItemViews/WarningMessageItem.cpp.o
+.PHONY : Views/MessageItemViews/WarningMessageItem.cpp.o
+
+Views/MessageItemViews/WarningMessageItem.i: Views/MessageItemViews/WarningMessageItem.cpp.i
+
+.PHONY : Views/MessageItemViews/WarningMessageItem.i
+
+# target to preprocess a source file
+Views/MessageItemViews/WarningMessageItem.cpp.i:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Views/MessageItemViews/WarningMessageItem.cpp.i
+.PHONY : Views/MessageItemViews/WarningMessageItem.cpp.i
+
+Views/MessageItemViews/WarningMessageItem.s: Views/MessageItemViews/WarningMessageItem.cpp.s
+
+.PHONY : Views/MessageItemViews/WarningMessageItem.s
+
+# target to generate assembly for a file
+Views/MessageItemViews/WarningMessageItem.cpp.s:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Views/MessageItemViews/WarningMessageItem.cpp.s
+.PHONY : Views/MessageItemViews/WarningMessageItem.cpp.s
+
 Views/NetListItem.o: Views/NetListItem.cpp.o
 
 .PHONY : Views/NetListItem.o
@@ -2610,6 +2745,21 @@ help:
 	@echo "... Views/MainWindowUIFilter.o"
 	@echo "... Views/MainWindowUIFilter.i"
 	@echo "... Views/MainWindowUIFilter.s"
+	@echo "... Views/MessageItemViews/ChatMessageItem.o"
+	@echo "... Views/MessageItemViews/ChatMessageItem.i"
+	@echo "... Views/MessageItemViews/ChatMessageItem.s"
+	@echo "... Views/MessageItemViews/FileMessageItem.o"
+	@echo "... Views/MessageItemViews/FileMessageItem.i"
+	@echo "... Views/MessageItemViews/FileMessageItem.s"
+	@echo "... Views/MessageItemViews/MessageItem.o"
+	@echo "... Views/MessageItemViews/MessageItem.i"
+	@echo "... Views/MessageItemViews/MessageItem.s"
+	@echo "... Views/MessageItemViews/NudgeMessageItem.o"
+	@echo "... Views/MessageItemViews/NudgeMessageItem.i"
+	@echo "... Views/MessageItemViews/NudgeMessageItem.s"
+	@echo "... Views/MessageItemViews/WarningMessageItem.o"
+	@echo "... Views/MessageItemViews/WarningMessageItem.i"
+	@echo "... Views/MessageItemViews/WarningMessageItem.s"
 	@echo "... Views/NetListItem.o"
 	@echo "... Views/NetListItem.i"
 	@echo "... Views/NetListItem.s"
