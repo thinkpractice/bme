@@ -258,32 +258,32 @@ Models/ChatHandler.cpp.s:
 	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Models/ChatHandler.cpp.s
 .PHONY : Models/ChatHandler.cpp.s
 
-Models/ChatMessage.o: Models/ChatMessage.cpp.o
+Models/ChatMessages/ChatMessage.o: Models/ChatMessages/ChatMessage.cpp.o
 
-.PHONY : Models/ChatMessage.o
+.PHONY : Models/ChatMessages/ChatMessage.o
 
 # target to build an object file
-Models/ChatMessage.cpp.o:
-	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Models/ChatMessage.cpp.o
-.PHONY : Models/ChatMessage.cpp.o
+Models/ChatMessages/ChatMessage.cpp.o:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Models/ChatMessages/ChatMessage.cpp.o
+.PHONY : Models/ChatMessages/ChatMessage.cpp.o
 
-Models/ChatMessage.i: Models/ChatMessage.cpp.i
+Models/ChatMessages/ChatMessage.i: Models/ChatMessages/ChatMessage.cpp.i
 
-.PHONY : Models/ChatMessage.i
+.PHONY : Models/ChatMessages/ChatMessage.i
 
 # target to preprocess a source file
-Models/ChatMessage.cpp.i:
-	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Models/ChatMessage.cpp.i
-.PHONY : Models/ChatMessage.cpp.i
+Models/ChatMessages/ChatMessage.cpp.i:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Models/ChatMessages/ChatMessage.cpp.i
+.PHONY : Models/ChatMessages/ChatMessage.cpp.i
 
-Models/ChatMessage.s: Models/ChatMessage.cpp.s
+Models/ChatMessages/ChatMessage.s: Models/ChatMessages/ChatMessage.cpp.s
 
-.PHONY : Models/ChatMessage.s
+.PHONY : Models/ChatMessages/ChatMessage.s
 
 # target to generate assembly for a file
-Models/ChatMessage.cpp.s:
-	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Models/ChatMessage.cpp.s
-.PHONY : Models/ChatMessage.cpp.s
+Models/ChatMessages/ChatMessage.cpp.s:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Models/ChatMessages/ChatMessage.cpp.s
+.PHONY : Models/ChatMessages/ChatMessage.cpp.s
 
 Models/ChatWindowHandler.o: Models/ChatWindowHandler.cpp.o
 
@@ -2550,9 +2550,9 @@ help:
 	@echo "... Models/ChatHandler.o"
 	@echo "... Models/ChatHandler.i"
 	@echo "... Models/ChatHandler.s"
-	@echo "... Models/ChatMessage.o"
-	@echo "... Models/ChatMessage.i"
-	@echo "... Models/ChatMessage.s"
+	@echo "... Models/ChatMessages/ChatMessage.o"
+	@echo "... Models/ChatMessages/ChatMessage.i"
+	@echo "... Models/ChatMessages/ChatMessage.s"
 	@echo "... Models/ChatWindowHandler.o"
 	@echo "... Models/ChatWindowHandler.i"
 	@echo "... Models/ChatWindowHandler.s"

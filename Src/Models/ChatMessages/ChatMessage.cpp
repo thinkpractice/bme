@@ -5,19 +5,24 @@
 #include "Contact.h"
 
 ChatMessage::ChatMessage(Contact* contact, const BString& messageText)
-                :   _sender(contact),
+                :   BArchivable(),
+                    _sender(contact),
                     _messageText(messageText)
 {
 }
 
 ChatMessage::ChatMessage(const ChatMessage& chatMessage)
+                :   BArchivable()
 {
     _sender = chatMessage.Sender();
     _messageText = chatMessage.GetText();
 }
 
 ChatMessage::ChatMessage(BMessage *archive)
+                : BArchivable(archive)
 {
+    archive->FindString(kMessageText, &_messageText);
+    archive->FindInt64(kTimeStamp, &_timestamp);
 }
 
 ChatMessage::~ChatMessage()
@@ -27,6 +32,15 @@ ChatMessage::~ChatMessage()
 Contact* ChatMessage::Sender() const
 {
     return _sender;
+}
+
+status_t ChatMessage::Archive(BMessage *into, bool deep) const
+{
+    status_t status = BArchivable::Archive(into, deep);
+    status = into->AddString("class", "ChatMessage");
+    status = into->AddString(kMessageText, _messageText);
+    status = into->AddInt64(kTimeStamp, _timestamp);
+    return status;
 }
 
 void ChatMessage::SetText(const BString& messageText)
@@ -47,5 +61,12 @@ bigtime_t ChatMessage::Timestamp()
 void ChatMessage::SetTimeStamp(bigtime_t timestamp)
 {
     _timestamp = timestamp;
+}
+
+BArchivable* ChatMessage::Instantiate(BMessage* archive)
+{
+    if (!validate_instantiation(archive, "ChatMessage"))
+        return NULL;
+    return new ChatMessage(archive);
 }
 
