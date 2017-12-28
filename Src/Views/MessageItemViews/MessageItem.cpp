@@ -29,3 +29,9 @@ void MessageItem::SetMessage(ChatMessage* message)
 	}
 	_message = message;
 }
+
+void MessageItem::Update(BView* owner, const BFont* font)
+{
+    BListItem::Update(owner, font);
+}
+

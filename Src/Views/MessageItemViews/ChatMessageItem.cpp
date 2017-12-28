@@ -106,6 +106,8 @@ BRect ChatMessageItem::ItemBounds()
 
 void ChatMessageItem::Update(BView* owner, const BFont* font)
 {
+    cout << "in ChatMessageItem::Update" << endl;
+    MessageItem::Update(owner, font);
 	/*TextWrapper wrapper(owner,TextWrapper::K_WIDTH_FIXED);
 	BRect wrapRect = 
 	wrapper.DrawLineBuffer(wrapRect, m_lineBuffer);*/

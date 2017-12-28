@@ -13,7 +13,7 @@ class MessageItem : public BListItem
 		ChatMessage*		Message();					
 		virtual	void		SetMessage(ChatMessage* message);		
 		virtual void 		DrawItem(BView* owner, BRect itemRect, bool drawEverything = false) = 0;
-		virtual void 		Update(BView* owner, const BFont* font) = 0;
+		virtual void 		Update(BView* owner, const BFont* font);
 		
 	private:
 		ChatMessage*		_message;		
