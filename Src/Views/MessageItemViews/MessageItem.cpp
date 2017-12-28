@@ -6,26 +6,26 @@
 
 MessageItem::MessageItem(ChatMessage* message)
 				: BListItem(),
-                m_message(message)
+                _message(message)
 {
 }
 
 MessageItem::~MessageItem()
 {
-	delete m_message;
+	delete _message;
 }
 
 ChatMessage* MessageItem::Message()
 {
-	return m_message;
+	return _message;
 }
 					
 void MessageItem::SetMessage(ChatMessage* message)
 {
-	if (m_message)
+	if (_message)
 	{
 		//clean up the old message		
-		delete m_message;
+		delete _message;
 	}
-	m_message = message;
+	_message = message;
 }
