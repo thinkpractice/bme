@@ -7,22 +7,22 @@
 
 class ChatMessageItem : public MessageItem
 {
-	public:
-		ChatMessageItem(ChatMessage* message, bool followUp = false);
-		virtual				~ChatMessageItem();
-		
-		virtual void 		DrawItem(BView* owner, BRect itemRect, bool drawEverything = false);
-		virtual void 		Update(BView* owner, const BFont* font);
-		
-		bool				IsFollowUp();
-		void				SetFollowUp(bool followUp);
-		BRect				ItemBounds();
-	
-	private:
-		bool				m_followUp;
-		TaggedText* 		m_text;
-		BRect				m_bounds;	
-		LineBuffer*			m_lineBuffer;	
+    public:
+        ChatMessageItem(ChatMessage* message, bool followUp = false);
+        virtual				~ChatMessageItem();
+        
+        virtual void 		DrawItem(BView* owner, BRect itemRect, bool drawEverything = false);
+        virtual void 		Update(BView* owner, const BFont* font);
+        
+        bool				IsFollowUp();
+        void				SetFollowUp(bool followUp);
+        BRect				ItemBounds();
+
+    private:
+        bool				m_followUp;
+        TaggedText* 		m_text;
+        BRect				m_bounds;	
+        LineBuffer*			m_lineBuffer;	
 };
 
 #endif

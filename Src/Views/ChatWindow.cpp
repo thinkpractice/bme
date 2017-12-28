@@ -151,12 +151,14 @@ void ChatWindow::MessageReceived(BMessage *message)
 		break;
 		case InterfaceMessages::K_USER_SEND_TEXT_MSG:
 		{
-			message->AddString(K_MESSAGE_TEXT, m_convTextView->Text());
+			BString messageText(m_convTextView->Text());
+
+            message->AddString(K_MESSAGE_TEXT, messageText);
 			m_owner.SendMessage(message);
 			
 			
 			Contact* userContact = new Contact("obelmiks@hotmail.com","Tim", "",0,statusses["FLN"]);
-			ChatMessage *userTextMessage = new ChatMessage(userContact, "");
+			ChatMessage *userTextMessage = new ChatMessage(userContact, messageText);
 			m_convLogView->AddMessage(userTextMessage);
 			
 			m_convTextView->SetText("");

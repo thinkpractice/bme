@@ -25,10 +25,10 @@ Status::Status()
  */
 Status::Status(BString statName, BString statAbbr, BBitmap* icon, bool usrChoice, rgb_color statusColour)
 			:	BArchivable(),
-				m_statusName(statName),
-				m_statusAbbreviation(statAbbr),
-				m_userChoice(usrChoice),
-				m_statusColour(statusColour)					
+				_statusName(statName),
+				_statusAbbreviation(statAbbr),
+				_userChoice(usrChoice),
+				_statusColour(statusColour)					
 			
 {
 	AddIcon(icon);		
@@ -41,10 +41,10 @@ Status::Status(BString statName, BString statAbbr, BBitmap* icon, bool usrChoice
 Status::Status(BMessage* archive)
 			:	BArchivable(archive)
 {
-	archive->FindString("Status::statusName",&m_statusName);
-	archive->FindString("Status::statusAbbreviation",&m_statusAbbreviation);
-	archive->FindBool("Status::userChoice",&m_userChoice);
-	rgb_color *findColour = &m_statusColour;
+	archive->FindString("Status::statusName",&_statusName);
+	archive->FindString("Status::statusAbbreviation",&_statusAbbreviation);
+	archive->FindBool("Status::userChoice",&_userChoice);
+	rgb_color *findColour = &_statusColour;
 	ssize_t size;
 	archive->FindData("Status::statusColour",B_RGB_COLOR_TYPE,(const void**)&findColour, &size);
 		
@@ -64,7 +64,7 @@ Status::Status(BMessage* archive)
 Status::~Status()
 {	
 	typedef map<int32, BBitmap*>::const_iterator II;
-	for (II p = m_statusIcons.begin(); p != m_statusIcons.end(); ++p)
+	for (II p = _statusIcons.begin(); p != _statusIcons.end(); ++p)
 	{
 		delete (*p).second;
 	}
@@ -72,7 +72,7 @@ Status::~Status()
 
 void Status::SetStatusName(BString name)
 {
-	m_statusName = name;
+	_statusName = name;
 }
 
 /**	Get the user readable name of this status.
@@ -80,12 +80,12 @@ void Status::SetStatusName(BString name)
  */
 BString Status::GetStatusName() 
 {
-	return m_statusName;
+	return _statusName;
 }
 
 void Status::SetAbbreviation(BString abbreviation)
 {
-	m_statusAbbreviation = abbreviation;
+	_statusAbbreviation = abbreviation;
 }
 
 /**	Gets the abbreviation for this status. This abbreviation is
@@ -95,7 +95,7 @@ void Status::SetAbbreviation(BString abbreviation)
  */
 BString Status::GetAbbreviation()
 {
-	return m_statusAbbreviation;
+	return _statusAbbreviation;
 }
 
 /**	Gets the icon representation of this status.
@@ -103,7 +103,7 @@ BString Status::GetAbbreviation()
  */
 BBitmap* Status::GetStatusIcon(int32 width)
 {
-	return m_statusIcons[width];
+	return _statusIcons[width];
 }
 
 /**	
@@ -111,7 +111,7 @@ BBitmap* Status::GetStatusIcon(int32 width)
 void Status::AddIcon(BBitmap *statusIcon)
 {
 	int32 width = int32((statusIcon->Bounds()).Width());
-	m_statusIcons[width] = statusIcon;
+	_statusIcons[width] = statusIcon;
 }
 
 /**	Returns if this status represents an online status: true if
@@ -121,13 +121,13 @@ void Status::AddIcon(BBitmap *statusIcon)
  */
 bool Status::IsOnline() const
 { 	
-	return m_statusAbbreviation != Statusses::K_OFFLINE;
+	return _statusAbbreviation != Statusses::K_OFFLINE;
 }
 
 
 void Status::SetUserChoice(bool userChoice)
 {
-	m_userChoice = userChoice;
+	_userChoice = userChoice;
 }
 
 /**	Returns if this status is a status that can be chosen by the user.
@@ -135,17 +135,17 @@ void Status::SetUserChoice(bool userChoice)
  */
 bool Status::IsUserChoice() const
 {
-	return m_userChoice;
+	return _userChoice;
 }
 
 void Status::SetStatusColour(rgb_color colour)
 {
-	m_statusColour = colour;
+	_statusColour = colour;
 }
 
 rgb_color Status::StatusColour() const
 {
-	return m_statusColour; 
+	return _statusColour; 
 }
 
 /** Instantiates a Status object from a message archive.
@@ -168,15 +168,15 @@ BArchivable* Status::Instantiate(BMessage *archive)
 status_t Status::Archive(BMessage *archive, bool deep) const
 {
 	archive->AddString("class","Status");
-	archive->AddString("Status::statusName",m_statusName);
-	archive->AddString("Status::statusAbbreviation",m_statusAbbreviation);
-	archive->AddBool("Status::userChoice",m_userChoice);
-	archive->AddData("Status::statusColour",B_RGB_COLOR_TYPE,(void**)&m_statusColour,sizeof(rgb_color));
+	archive->AddString("Status::statusName",_statusName);
+	archive->AddString("Status::statusAbbreviation",_statusAbbreviation);
+	archive->AddBool("Status::userChoice",_userChoice);
+	archive->AddData("Status::statusColour",B_RGB_COLOR_TYPE,(void**)&_statusColour,sizeof(rgb_color));
 	if(deep)
 	{
 		
 		typedef map<int32, BBitmap*>::const_iterator II;
-		for (II p = m_statusIcons.begin(); p != m_statusIcons.end(); ++p)
+		for (II p = _statusIcons.begin(); p != _statusIcons.end(); ++p)
 		{
 			BMessage child;
 			BBitmap* statusIcon = (*p).second;

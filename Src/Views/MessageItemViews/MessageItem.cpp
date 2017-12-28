@@ -5,7 +5,8 @@
 #include "ChatMessage.h"
 
 MessageItem::MessageItem(ChatMessage* message)
-				:	m_message(message)
+				: BListItem(),
+                m_message(message)
 {
 }
 

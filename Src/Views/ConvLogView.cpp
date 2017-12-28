@@ -18,6 +18,7 @@
 #include "MessageItem.h"
 #include "ChatMessageItem.h"
 #include "Contact.h"
+#include <iostream>
 
 ConvLogView::ConvLogView(BRect frame,  BRect textRect) 
 				:	BListView(frame, "ConvLogView", B_MULTIPLE_SELECTION_LIST, B_FOLLOW_ALL, B_WILL_DRAW | B_NAVIGABLE | B_FRAME_EVENTS | B_FULL_UPDATE_ON_RESIZE)
@@ -133,7 +134,7 @@ void ConvLogView::AddMessage(ChatMessage *message)
 void ConvLogView::ScrollToLastItem()
 {
     //scroll to last item in list
-    int32 lastItemIndex = CountItems() - 1; 
+    int32 lastItemIndex = CountItems() - 1;
     Select(lastItemIndex);
     ScrollToSelection();
 }

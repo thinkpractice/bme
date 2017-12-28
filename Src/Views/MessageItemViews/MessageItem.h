@@ -16,7 +16,7 @@ class MessageItem : public BListItem
 		virtual void 		Update(BView* owner, const BFont* font) = 0;
 		
 	private:
-		ChatMessage*		m_message;		
+		ChatMessage*		_message;		
 };
 
 #endif
