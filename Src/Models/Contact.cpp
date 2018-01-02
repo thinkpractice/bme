@@ -25,7 +25,7 @@ Contact::Contact(BString passport, BString friendlyName, BString guid)
             :   _passport(passport),
                 _friendlyName(friendlyName),
                 _guid(guid),
-                _hasPersonalMessage(false),
+                _hasPersonalMessage(false)
 {
 }
 
