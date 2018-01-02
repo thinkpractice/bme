@@ -13,8 +13,8 @@ Group::Group()
 }
 
 Group::Group(BString name, BString groupID)
-		:	m_groupName(name),
-			m_groupID(groupID)
+		:	_groupName(name),
+			_groupID(groupID)
 {
 }
 
@@ -22,36 +22,22 @@ Group::~Group()
 {
 }
 
-BString	Group::XMLFlatten()
-{
-	BString xmlString = "<group id = \"";  
-	xmlString.Append(GroupID());
-	xmlString.Append("\">");
-	xmlString.Append(GroupName());
-	xmlString.Append("</group>");
-	return xmlString;
-}
-
-/*void Group::XMLUnflatten(xmlDocPtr xmlDocument)
-{
-}*/
-
 void Group::SetGroupName(BString name)
 {
-	m_groupName = name;
+    _groupName = name;
 }
 
 BString Group::GroupName()
 {
-	return m_groupName;
+    return _groupName;
 }
 
 void Group::SetGroupID(BString id)
 {
-	m_groupID = id;
+    _groupID = id;
 }
 
 BString Group::GroupID()
 {
-	return m_groupID;
+    return _groupID;
 }

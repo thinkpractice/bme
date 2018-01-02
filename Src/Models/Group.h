@@ -7,30 +7,24 @@
 #ifndef GROUP_H
 #define GROUP_H
 
-#include "IXMLFlattenable.h"
+#include <support/String.h>
 
-#include <be/support/String.h>
-
-class Group : public IXMLFlattenable
+class Group
 {
-	public:
-		Group();
-		Group(BString name, BString groupID);
-		virtual				~Group();
-		
-		//inherited from IXMLFlattenable
-		BString				XMLFlatten();
-		//void				XMLUnflatten(xmlDocPtr xmlDocument);
-		
-		void				SetGroupName(BString name);
-		BString				GroupName();
-		
-		void				SetGroupID(BString id);
-		BString				GroupID();
-		
-	private:
-		BString				m_groupName,
-							m_groupID;
+    public:
+        Group();
+        Group(BString name, BString groupID);
+        virtual ~Group();
+        
+        void SetGroupName(BString name);
+        BString GroupName();
+        
+        void SetGroupID(BString id);
+        BString GroupID();
+        
+    private:
+        BString _groupName,
+                _groupID;
 };
 
 #endif
