@@ -103,3 +103,21 @@ BString Contact::PersonalMessage()
     return _personalMessage;
 }
 
+status_t Contact::Archive(BMessage* archive, bool deep)
+{
+    status_t status = BArchivable::Archive(archive, deep);
+    status = archive->AddString("class", "Contact");
+    status = archive->AddString(kGuidField, _guid);
+    status = archive->AddString(kPassportField, _passport);
+    status = archive->AddString(kFriendlyNameField, _friendlyName);
+    status = archive->AddString(kPersonalMessageField, _personalMessage);
+    status = archive->AddBool(kHasPersonalMessageField, _hasPersonalMessage);
+    return status;
+}
+
+BArchivable* Contact::Instantiate(BMessage* archive)
+{
+   if (!validate_instantiation(archive, "Contact"))
+      return NULL;
+   return new Contact(archive);
+}

@@ -40,6 +40,11 @@ class Contact : public BArchivable
         bool IsBlocked();
         bool IsOnline();
         
+        virtual status_t Archive(BMessage* archive, bool deep = true);
+
+    public:
+        static BArchivable* Instantiate(BMessage* archive);
+
     private:
         BString _passport,
                 _friendlyName,

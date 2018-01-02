@@ -130,7 +130,7 @@ void ContactListHandler::MessageReceived(BMessage *message)
 					else if (temp.FindFirst("C=") != B_ERROR)
 					{
 						temp.RemoveFirst("C=");
-						newContact->SetGUID(temp);
+						//newContact->SetGUID(temp);
 					}
 					else if (i == 4)
 					{
@@ -148,7 +148,7 @@ void ContactListHandler::MessageReceived(BMessage *message)
 								temp.CopyInto(groupID,startIndex, commaIndex-startIndex);		
 								//add group to grouplist of contact
 								Group *group = m_groups[groupID];
-								newContact->AddGroup(group);
+								//newContact->AddGroup(group);
 cout << "GroupID 1= " << group << ", " << groupID.String() << endl;								
 								groupID = "";
 								//start searching at position past the previous found comma
@@ -161,7 +161,7 @@ cout << "GroupID 1= " << group << ", " << groupID.String() << endl;
 								groupID = temp;
 								//add group to grouplist of contact
 								Group *group = m_groups[groupID];
-								newContact->AddGroup(group);
+								//newContact->AddGroup(group);
 cout << "GroupID 2= " << group << ", " << groupID.String() << endl;
 								groupID = "";								
 								break;
@@ -172,7 +172,7 @@ cout << "GroupID 2= " << group << ", " << groupID.String() << endl;
 					else
 					{ 
 						int32 partOfLists = atoi(temp.String());
-						newContact->SetPartOfLists(partOfLists);
+						//newContact->SetPartOfLists(partOfLists);
 						listBitIndex = i;
 					}
 					i++;					
@@ -309,12 +309,12 @@ void ContactListHandler::AddContact(Contact *contact)
 	//set initial status to offline
 	contact->SetStatus(statusses[Statusses::K_OFFLINE]);
 	//only add to contact list(UI) if on forward list
-	if (contact->IsOnForwardList())
+	/*if (contact->IsOnForwardList())
 	{
 		BMessage *contactMsg = new BMessage(InterfaceMessages::K_ADD_CONTACT_MSG);
 		contactMsg->AddPointer(K_CONTACT, contact);
 		SendCommandMessage(contactMsg);		
-	}
+	}*/
 	//we added another contact
 	m_contactsAdded++;
 	

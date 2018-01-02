@@ -308,7 +308,7 @@ void MainWindow::MessageReceived(BMessage *message)
 			Contact *contact;
 			if (message->FindPointer(K_CONTACT,(void **)&contact) == B_OK)
 			{				
-				vector<Group*> contactGroups = contact->Groups();
+				/*vector<Group*> contactGroups = contact->Groups();
 				//iterate to all groups this contact has been added to
 				typedef vector<Group*>::const_iterator GI;
 				for (GI p = contactGroups.begin(); p != contactGroups.end(); ++p)
@@ -322,7 +322,7 @@ void MainWindow::MessageReceived(BMessage *message)
 						m_contactListView->SortContacts();
 					}
 
-				}
+				}*/
 			}
 		}
 		break;

@@ -157,7 +157,7 @@ void ChatWindow::MessageReceived(BMessage *message)
 			m_owner.SendMessage(message);
 			
 			
-			Contact* userContact = new Contact("obelmiks@hotmail.com","Tim", "",0,statusses["FLN"]);
+			Contact* userContact = new Contact("obelmiks@hotmail.com","Tim", "");
 			ChatMessage *userTextMessage = new ChatMessage(userContact, messageText);
 			m_convLogView->AddMessage(userTextMessage);
 			
