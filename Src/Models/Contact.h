@@ -7,67 +7,48 @@
 #ifndef CONTACT_H
 #define CONTACT_H
 
-#include "IXMLFlattenable.h"
-
-#include <be/support/String.h>
-#include <vector>
+#include <app/Message.h>
+#include <support/String.h>
+#include <support/Archivable.h>
 #include "Status.h"
-#include "Group.h"
 
 using namespace std;
 
-class Contact : public IXMLFlattenable
+class Contact : public BArchivable
 {
-	public:
-		Contact();
-		Contact(BString passport, BString friendlyName, BString guid, int32 partOfLists, Status *status);
-		Contact(BString passport, BString friendlyName, BString guid, int32 partOfLists, Status *status, vector<Group*> &groups);
-		virtual				~Contact();
-		
-		//inherited from IXMLFlattenable
-		BString				XMLFlatten();
-		//void				XMLUnflatten(xmlDocPtr xmlDocument);
-		
-		void				SetPassport(BString passport);
-		BString				Passport();
-		
-		void				SetFriendlyName(BString friendlyName);
-		BString				FriendlyName();
-		
-		void				SetGUID(BString guid);
-		BString				GUID();
-		
-		void				AddGroup(Group *group);
-		vector<Group*>		Groups();
-		
-		void				SetPartOfLists(int32 partOfLists);
-		int32				PartOfLists();
-		
-		void				SetStatus(Status *status);
-		Status*				GetStatus();
-		
-		bool				IsOnForwardList();
-		bool				OnReverseList();
-		bool				IsOnAllowList();
-		bool				IsBlocked();				
-		bool				IsOnline();
-		
-		bool				HasPersonalMessage();
-		void				SetPersonalMessage(BString personalMessage);
-		BString				PersonalMessage();
-		
-	private:
-		BString				m_passport,
-							m_friendlyName,
-							m_guid,
-							m_personalMessage
-							;		
-							
-		bool				m_hasPersonalMessage;
-		int32				m_partOfLists;
-		
-		Status				*m_status;
-		vector<Group*>		m_groups;
+    public:
+        Contact();
+        Contact(BString passport, BString friendlyName, BString guid);
+        Contact(BMessage* message);
+        virtual ~Contact();
+        
+        BString GUID();
+
+        void SetPassport(BString passport);
+        BString Passport();
+
+        void SetFriendlyName(BString friendlyName);
+        BString FriendlyName();
+        
+        void SetStatus(Status *status);
+        Status* GetStatus();
+
+        bool HasPersonalMessage();
+        void SetPersonalMessage(BString personalMessage);
+        BString PersonalMessage();
+        
+        bool IsBlocked();
+        bool IsOnline();
+        
+    private:
+        BString _passport,
+                _friendlyName,
+                _guid,
+                _personalMessage;
+                            
+        bool _hasPersonalMessage;
+        
+        Status* _status;
 };
 
 #endif

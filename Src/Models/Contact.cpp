@@ -10,152 +10,96 @@
 
 #include "ProtocolConstants.h"
 
+#define kGuidField "Contact::Guid"
+#define kPassportField  "Contact::Passport"
+#define kFriendlyNameField "Contact::FriendlyName"
+#define kPersonalMessageField "Contact::PersonalMessage"
+#define kHasPersonalMessageField "Contact::HasPersonalMessage"
+
 Contact::Contact()
-			:	m_hasPersonalMessage(false)
+            :   _hasPersonalMessage(false)
 {
 }
 
-Contact::Contact(BString passport, BString friendlyName, BString guid, int32 partOfLists, Status *status)
-			:	m_passport(passport),
-				m_friendlyName(friendlyName),
-				m_guid(guid),
-				m_hasPersonalMessage(false),
-				m_partOfLists(partOfLists),
-				m_status(status)
-				
+Contact::Contact(BString passport, BString friendlyName, BString guid)
+            :   _passport(passport),
+                _friendlyName(friendlyName),
+                _guid(guid),
+                _hasPersonalMessage(false),
 {
 }
 
-Contact::Contact(BString passport, BString friendlyName, BString guid, int32 partOfLists, Status *status, vector<Group*> &groups)
-			:	m_passport(passport),
-				m_friendlyName(friendlyName),
-				m_guid(guid),
-				m_hasPersonalMessage(false),	
-				m_partOfLists(partOfLists),
-				m_status(status)
-							
+Contact::Contact(BMessage* message)
 {
-	m_groups = groups;
+    message->FindString(kGuidField, &_guid);
+    message->FindString(kPassportField, &_passport);
+    message->FindString(kFriendlyNameField, &_friendlyName);
+    message->FindString(kPersonalMessageField, &_personalMessage);
+    message->FindBool(kHasPersonalMessageField, &_hasPersonalMessage);
 }
 
 Contact::~Contact()
 {
 }
 
-BString	Contact::XMLFlatten()
+BString Contact::GUID()
 {
-	BString xmlString = "";
-	return xmlString;
+    return _guid;
 }
-
-/*void Contact::XMLUnflatten(xmlDocPtr xmlDocument)
-{
-}*/
 
 void Contact::SetPassport(BString passport)
 {
-	m_passport = passport;
+    _passport = passport;
 }
 
 BString Contact::Passport()
 {
-	return m_passport;
+    return _passport;
 }
 
 void Contact::SetFriendlyName(BString friendlyName)
 {
-	m_friendlyName = friendlyName;
+    _friendlyName = friendlyName;
 }
 
 BString Contact::FriendlyName()
 {
-	return m_friendlyName;
-}
-
-void Contact::SetGUID(BString guid)
-{
-	m_guid = guid;
-}
-
-BString Contact::GUID()
-{
-	return m_guid;
-}
-
-void Contact::AddGroup(Group *group)
-{
-	if (group)
-	{
-		m_groups.push_back(group);
-	}
-}
-
-vector<Group*> Contact::Groups()
-{
-	return m_groups;
-}
-
-void Contact::SetPartOfLists(int32 partOfLists)
-{
-	m_partOfLists = partOfLists;
-}
-
-int32 Contact::PartOfLists()
-{
-	return m_partOfLists;
+    return _friendlyName;
 }
 
 void Contact::SetStatus(Status *status)
 {
-	m_status = status;
+    _status = status;
 }
 
 Status* Contact::GetStatus()
 {
-	return m_status;
-}
-
-bool Contact::IsOnForwardList()
-{
-	//find out if this contact is part of the forward list
-	return ((m_partOfLists & ContactListTypes::K_FORWARD_LIST) == 1);
-}
-
-bool Contact::OnReverseList()
-{
-	//find out if this contact has you on their forward list
-	return ((m_partOfLists & ContactListTypes::K_REVERSE_LIST) == 1);
-}
-
-bool Contact::IsOnAllowList()
-{
-	//find out if this contact has you on their allow list
-	return ((m_partOfLists & ContactListTypes::K_ALLOW_LIST) == 1);
+    return _status;
 }
 
 bool Contact::IsBlocked()
 {
-	//find out if this contact is part of the blocked list
-	return ((m_partOfLists & ContactListTypes::K_BLOCK_LIST) == 1);
+    return false;
 }
 
 bool Contact::IsOnline()
 {
-	return (m_status->GetAbbreviation() != Statusses::K_OFFLINE);
+    return (_status->GetAbbreviation() != Statusses::K_OFFLINE);
 }
 
 bool Contact::HasPersonalMessage()
-{	
-	return m_hasPersonalMessage;
+{
+    return _hasPersonalMessage;
 }
 
 void Contact::SetPersonalMessage(BString personalMessage)
 {
-	m_hasPersonalMessage = true;
-	m_personalMessage = personalMessage;
+    _hasPersonalMessage = true;
+    _personalMessage = personalMessage;
 }
 
 BString Contact::PersonalMessage()
 {
-	return m_personalMessage;
+    return _personalMessage;
 }
+
