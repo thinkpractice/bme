@@ -23,10 +23,16 @@ ChatMessage::ChatMessage(BMessage *archive)
 {
     archive->FindString(kMessageText, &_messageText);
     archive->FindInt64(kTimeStamp, &_timestamp);
+    
+    BMessage contactMessage;
+    archive->FindMessage(kSender, &contactMessage);
+    BArchivable* contactArchivable = Contact::Instantiate(&contactMessage);
+    _sender = static_cast<Contact*>(contactArchivable);
 }
 
 ChatMessage::~ChatMessage()
 {
+    //delete _sender;
 }
 
 Contact* ChatMessage::Sender() const
@@ -40,6 +46,7 @@ status_t ChatMessage::Archive(BMessage *into, bool deep) const
     status = into->AddString("class", "ChatMessage");
     status = into->AddString(kMessageText, _messageText);
     status = into->AddInt64(kTimeStamp, _timestamp);
+    status = _sender->Archive(into);
     return status;
 }
 

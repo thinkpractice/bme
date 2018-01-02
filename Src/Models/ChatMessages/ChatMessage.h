@@ -5,9 +5,9 @@
 #include <support/Archivable.h>
 #include <support/String.h>
 
-#define kMessageText    "ChatMessageText"
-#define kTimeStamp      "ChatMessageTimeStamp"
-#define kSender         "ChatMessageSender"
+#define kMessageText    "ChatMessage::Text"
+#define kTimeStamp      "ChatMessage::TimeStamp"
+#define kSender         "ChatMessage::Sender"
 
 class Contact;
 
