@@ -97,7 +97,6 @@ status_t LoadStatusses(BPath statFilePath)
 					BPath bitmapPath;
 					statFilePath.GetParent(&bitmapPath);
 					bitmapPath.Append(bitmapString.String());
-					BBitmap *icon = BTranslationUtils::GetBitmap(bitmapPath.Path());
 					//construct status object
 					Status *status = FindStatus(abbreviation);
 					if (status != NULL)
@@ -140,7 +139,7 @@ status_t LoadStatusses(BPath statFilePath)
 						statusColour.blue = colours[2];
 						statusColour.alpha = colours[3];
 						//construct new status object
-						Status *status = new Status(statusName,abbreviation, userChoice, statusColour);
+						Status *status = new Status(statusName,abbreviation, bitmapPath, userChoice, true, statusColour);
 						statLock.Lock();
 						statusses[abbreviation] = status;
 						statLock.Unlock();	

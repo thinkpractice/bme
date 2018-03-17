@@ -12,6 +12,7 @@
 #include <support/Archivable.h>
 #include <support/String.h>
 #include <support/SupportDefs.h>
+#include <storage/Path.h>
 #include <map>
 
 using namespace std;
@@ -23,7 +24,8 @@ class Status : public BArchivable
 {
     public:
         Status();
-        Status(BString statusName, BString statusAbbr, bool usrChoice, rgb_color statusColour);
+        Status(BString statusName, BString guid, BPath iconPath,
+                bool usrChoice, bool isOnline, rgb_color statusColour);
         Status(BMessage* archive);
         virtual ~Status();
 
@@ -46,9 +48,11 @@ class Status : public BArchivable
 
     private:
         BString _statusName,
-                _statusAbbreviation;
+                _guid;
 
-        bool _userChoice;
+        BPath _iconPath;
+        bool _userChoice,
+             _isOnline;
         rgb_color _statusColour;
 };
 
