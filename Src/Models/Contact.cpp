@@ -84,7 +84,7 @@ bool Contact::IsBlocked()
 
 bool Contact::IsOnline()
 {
-    return (_status->GetAbbreviation() != Statusses::K_OFFLINE);
+    return (_status->IsOnline());
 }
 
 bool Contact::HasPersonalMessage()

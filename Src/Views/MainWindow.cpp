@@ -376,7 +376,8 @@ void MainWindow::MessageReceived(BMessage *message)
 				save = true;
 			message->AddBool("savepwd",save);
 			//get initial status			
-			message->AddString(K_NEW_STATUS,m_currentStatus->GetAbbreviation()); //TODO: find out when to send the initial status msg in the protocol
+			//TODO use GUID to identify status instead
+            //message->AddString(K_NEW_STATUS,m_currentStatus->GetAbbreviation()); //TODO: find out when to send the initial status msg in the protocol
 			//send message to protocol
 			BMessenger protocolMsgr(NULL,m_protocolLooper);
 			protocolMsgr.SendMessage(message);			
@@ -470,7 +471,8 @@ void MainWindow::MessageReceived(BMessage *message)
 			{
 				//request the status change in the protocol
 				BMessage *message = new BMessage(InterfaceMessages::K_USER_CHANGE_STATUS_MSG);
-				message->AddString(K_NEW_STATUS, m_currentStatus->GetAbbreviation());
+				//TODO see if we have code duplication here
+                //message->AddString(K_NEW_STATUS, m_currentStatus->GetAbbreviation());
 				BMessenger protocolMsgr(NULL,m_protocolLooper);
 				protocolMsgr.SendMessage(message);		
 			}

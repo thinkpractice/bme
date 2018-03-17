@@ -19,7 +19,7 @@ void ContactItem::DrawItem(BView *owner, BRect itemRect, bool drawEverything)
 	BString name = m_contact->FriendlyName();
 	Status *status = m_contact->GetStatus();
 	//draw status icon
-	BBitmap *statusBitmap = status->GetStatusIcon();
+	BBitmap *statusBitmap = status->StatusIcon();
 	
 	owner->SetDrawingMode(B_OP_OVER);
 	float bitmapWidth = (statusBitmap->Bounds()).Width();
@@ -61,7 +61,7 @@ void ContactItem::Update(BView *owner, const BFont *font)
 	BListItem::Update(owner, font);
 	//make height equal to the bitmap's height
 	Status *contactStatus = m_contact->GetStatus();
-	BBitmap *statusBitmap = contactStatus->GetStatusIcon();
+	BBitmap *statusBitmap = contactStatus->StatusIcon();
 	if (statusBitmap)
 	{
 		float height = (statusBitmap->Bounds()).Height() + 2.0f;	

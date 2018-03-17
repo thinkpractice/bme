@@ -102,7 +102,7 @@ status_t LoadStatusses(BPath statFilePath)
 					Status *status = FindStatus(abbreviation);
 					if (status != NULL)
 					{
-						status->AddIcon(icon);
+						//status->AddIcon(icon);
 					}
 					else
 					{
@@ -140,7 +140,7 @@ status_t LoadStatusses(BPath statFilePath)
 						statusColour.blue = colours[2];
 						statusColour.alpha = colours[3];
 						//construct new status object
-						Status *status = new Status(statusName,abbreviation, icon, userChoice, statusColour);
+						Status *status = new Status(statusName,abbreviation, userChoice, statusColour);
 						statLock.Lock();
 						statusses[abbreviation] = status;
 						statLock.Unlock();	

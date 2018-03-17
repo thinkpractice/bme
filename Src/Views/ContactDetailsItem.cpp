@@ -49,10 +49,10 @@ void ContactDetailsItem::DrawItem(BView *owner, BRect itemRect, bool drawEveryth
 	drawAtX += (m_isTypingIcon->Bounds()).Width() + 5.0f;
 	//draw contact status icon
 	Status *contactStatus = m_contact->GetStatus();
-	BBitmap *statusBitmap = contactStatus->GetStatusIcon();
+	//BBitmap *statusBitmap = contactStatus->GetStatusIcon();
 	owner->SetDrawingMode(B_OP_ALPHA);
-	owner->DrawBitmap(statusBitmap, itemRect.LeftTop() + BPoint(drawAtX, 1.0f));
-	drawAtX += (statusBitmap->Bounds()).Width() + 10.0f;
+	//owner->DrawBitmap(statusBitmap, itemRect.LeftTop() + BPoint(drawAtX, 1.0f));
+	//drawAtX += (statusBitmap->Bounds()).Width() + 10.0f;
 	
 	float contactPictureWidth = 18.0f;
 	//draw contact name(with emoticons)
@@ -98,7 +98,7 @@ void ContactDetailsItem::Update(BView *owner, const BFont *font)
 	BListItem::Update(owner, font);
 	//make height equal to the bitmap's height
 	Status *contactStatus = m_contact->GetStatus();
-	BBitmap *statusBitmap = contactStatus->GetStatusIcon();
+	BBitmap *statusBitmap = contactStatus->StatusIcon();
 	float height = (statusBitmap->Bounds()).Height() + 2.0f;	
 	SetHeight(height);	
 }
