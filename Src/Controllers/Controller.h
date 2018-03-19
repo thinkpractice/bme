@@ -4,6 +4,7 @@
 #include <vector>
 #include <functional>
 #include <app/Handler.h>
+#include "Action.h"
 
 using namespace std;
 
@@ -14,7 +15,7 @@ class Controller : public BHandler
         virtual ~Controller();
 
         virtual void MessageReceived(BMessage* message);
-        void Bind(int32 what, function<void(BMessage*)> handlerFunction);
+        void Bind(uint32 what, function<void(BMessage*)> handlerFunction);
 
     private:
         vector<Action> actions;
