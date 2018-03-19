@@ -131,6 +131,60 @@ void ChatWindow::SetOwner(BMessenger owner)
 	m_owner = owner;
 }
 
+void ChatWindow::ReceivedContactQuitMessage(BMessage* message)
+{
+    BString passport;
+    message->FindString(K_CONTACT_PASSPORT, &passport);
+
+    RemoveContact(passport);
+    m_contactDetailsView->Invalidate();
+}
+
+void ChatWindow::ReceivedUserSendTextMessage(BMessage* message)
+{
+    BString messageText(m_convTextView->Text());
+
+    message->AddString(K_MESSAGE_TEXT, messageText);
+    m_owner.SendMessage(message);
+
+    Contact* userContact = new Contact("obelmiks@hotmail.com","Tim", "");
+    ChatMessage *userTextMessage = new ChatMessage(userContact, messageText);
+    m_convLogView->AddMessage(userTextMessage);
+
+    m_convTextView->SetText("");
+}
+
+void ChatWindow::ReceivedContactSendTextMessage(BMessage* message)
+{
+    BString messageText;
+    if (message->FindString(K_MESSAGE_TEXT, &messageText) == B_OK)
+    {
+        //if the contact initiates the conversation, the window is
+        //hidden until the first textmessage
+        if(m_firstMessage && IsHidden())//TODO: check if IsHidden() works in this context!
+            Show();
+        //add message to message view
+    }
+    m_firstMessage = false;
+}
+
+void ChatWindow::ReceivedContactTypingMessage(BMessage* message)
+{
+    BString passport;
+    message->FindString(K_CONTACT_PASSPORT, &passport);
+    bool isTyping;
+    message->FindBool(K_IS_TYPING, &isTyping);
+    //turn typing on/off in contact details view
+    //ContactDetailsItem *ci = m_contactDetailsView->FindContact(passport);
+    //ci->SetTyping(isTyping);
+    m_contactDetailsView->Invalidate();
+}
+
+void ChatWindow::ReceivedCloseChatWindowMessage(BMessage* message)
+{
+    Quit();	
+}
+
 void ChatWindow::MessageReceived(BMessage *message)
 {
 	switch(message->what)
@@ -142,57 +196,27 @@ void ChatWindow::MessageReceived(BMessage *message)
 		break;		
 		case InterfaceMessages::K_CONTACT_QUIT_CONV_MSG:
 		{
-			BString passport;
-			message->FindString(K_CONTACT_PASSPORT, &passport);
-			
-			RemoveContact(passport);
-			m_contactDetailsView->Invalidate();
+            ReceivedContactQuitMessage(message);
 		}
 		break;
 		case InterfaceMessages::K_USER_SEND_TEXT_MSG:
 		{
-			BString messageText(m_convTextView->Text());
-
-            message->AddString(K_MESSAGE_TEXT, messageText);
-			m_owner.SendMessage(message);
-			
-			
-			Contact* userContact = new Contact("obelmiks@hotmail.com","Tim", "");
-			ChatMessage *userTextMessage = new ChatMessage(userContact, messageText);
-			m_convLogView->AddMessage(userTextMessage);
-			
-			m_convTextView->SetText("");
+            ReceivedUserSendTextMessage(message);
 		}
 		break;
 		case InterfaceMessages::K_CONTACT_SEND_TEXT_MSG:
 		{
-			BString messageText;
-			if (message->FindString(K_MESSAGE_TEXT, &messageText) == B_OK)
-			{
-				//if the contact initiates the conversation, the window is
-				//hidden until the first textmessage
-				if(m_firstMessage && IsHidden())//TODO: check if IsHidden() works in this context!
-					Show();
-				//add message to message view
-			}
-			m_firstMessage = false;
+            ReceivedContactSendTextMessage(message);
 		}
 		break;
 		case InterfaceMessages::K_CONTACT_TYPING_MSG:
 		{
-			BString passport;
-			message->FindString(K_CONTACT_PASSPORT, &passport);
-			bool isTyping;
-			message->FindBool(K_IS_TYPING, &isTyping);
-			//turn typing on/off in contact details view
-			//ContactDetailsItem *ci = m_contactDetailsView->FindContact(passport);
-			//ci->SetTyping(isTyping);
-			m_contactDetailsView->Invalidate();
+            ReceivedContactTypingMessage(message);
 		}
 		break;
 		case InterfaceMessages::K_CLOSE_CHAT_WINDOW:
 		{
-			Quit();	
+            ReceivedCloseChatWindowMessage(message);
 		}
 		break;
 		default:

@@ -36,6 +36,13 @@ class ChatWindow : public BWindow
         void				RemoveContact(BString contactPassport);
 
     private:
+        void ReceivedContactQuitMessage(BMessage* message);
+        void ReceivedUserSendTextMessage(BMessage* message);
+        void ReceivedContactSendTextMessage(BMessage* message);
+        void ReceivedContactTypingMessage(BMessage* message);
+        void ReceivedCloseChatWindowMessage(BMessage* message);
+
+    private:
         ConvLogView			*m_convLogView;
         BTextView			*m_convTextView;
         BListView			*m_contactDetailsView;
