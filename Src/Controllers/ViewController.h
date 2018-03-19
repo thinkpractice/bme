@@ -4,7 +4,7 @@
 #include "Controller.h"
 #include <interface/View.h>
 
-class ViewController : public Controller
+class ViewController : public BHandler
 {
     public:
         ViewController(BView* owner);
