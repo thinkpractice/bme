@@ -1,8 +1,7 @@
 #include "ViewController.h"
 
 ViewController::ViewController(BView *owner)
-                    :   Controller(),
-                        _owner(owner)
+                 :  _owner(owner)
 {
 }
 
