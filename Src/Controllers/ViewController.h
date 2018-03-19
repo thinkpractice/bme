@@ -1,10 +1,13 @@
 #ifndef VIEWCONTROLLER_H
 #define VIEWCONTROLLER_H
 
-#include <app/Handler.h>
+#include "Controller.h"
 
-class ViewController : public BHandler
+class ViewController : public Controller
 {
+    public:
+        ViewController();
+        virtual ~ViewController();
 };
 
 #endif
