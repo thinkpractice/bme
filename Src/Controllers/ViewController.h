@@ -2,7 +2,7 @@
 #define VIEWCONTROLLER_H
 
 #include "Controller.h"
-#include<interface/View.h>
+#include <interface/View.h>
 
 class ViewController : public Controller
 {

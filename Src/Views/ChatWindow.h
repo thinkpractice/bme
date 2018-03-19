@@ -1,7 +1,7 @@
 /*****************************************************************
- * Copyright (c) 2005 Tim de Jong								 *
- *							       								 *
- * All rights reserved.											 *
+ * Copyright (c) 2005 Tim de Jong                                *
+ *                                                               *
+ * All rights reserved.                                          *
  * Distributed under the terms of the MIT License.               *
  *****************************************************************/
 #ifndef CHAT_WINDOW_H
@@ -25,15 +25,15 @@ class ChatWindow : public BWindow
 {
     public:
         ChatWindow(BRect frame);
-        virtual				~ChatWindow();
+        virtual             ~ChatWindow();
 
-        void				SetOwner(BMessenger owner);
+        void                SetOwner(BMessenger owner);
 
-        virtual void		MessageReceived(BMessage *message);
-        virtual bool		QuitRequested();
+        virtual void        MessageReceived(BMessage *message);
+        virtual bool        QuitRequested();
 
-        void				AddContact(Contact *contact);
-        void				RemoveContact(BString contactPassport);
+        void                AddContact(Contact *contact);
+        void                RemoveContact(BString contactPassport);
 
     private:
         void ReceivedContactQuitMessage(BMessage* message);
@@ -43,20 +43,20 @@ class ChatWindow : public BWindow
         void ReceivedCloseChatWindowMessage(BMessage* message);
 
     private:
-        ConvLogView			*m_convLogView;
-        BTextView			*m_convTextView;
-        BListView			*m_contactDetailsView;
+        ConvLogView         *_convLogView;
+        BTextView           *_convTextView;
+        BListView           *_contactDetailsView;
 
-        BScrollView 		*m_convScroll,
-                            *m_convTextScroll,
-                            *m_contactScroll;
+        BScrollView         *_convScroll,
+                            *_convTextScroll,
+                            *_contactScroll;
 
-        WToolbar			*m_toolbarView;
-        ContactPictureView	*m_contactPictureView;
+        WToolbar            *_toolbarView;
+        ContactPictureView  *_contactPictureView;
 
-        BMessenger			m_owner;
+        BMessenger          _owner;
 
-        bool				m_firstMessage;
+        bool                _firstMessage;
 };
 
 #endif

@@ -1,6 +1,7 @@
 #include "Controller.h"
 
 Controller::Controller()
+            :   BHandler()
 {
 }
 
