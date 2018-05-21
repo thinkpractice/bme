@@ -1,8 +1,5 @@
 cmake_minimum_required(VERSION 3.4)
 
-#set compiler and linker to gcc 5.0
-#set(CMAKE_CXX_COMPILER "/boot/system/bin/g++-x86")
-
 project(Bme)
 
 set(CMAKE_CXX_STANDARD 11)
