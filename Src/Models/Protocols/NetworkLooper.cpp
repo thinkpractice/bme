@@ -55,7 +55,7 @@ void NetworkLooper::MessageReceived(BMessage *message)
 			if (recBytes > 0)
 			{				
 				m_commandCache.Append(temp,recBytes);
-				m_commandCache.Append('\0');
+//				m_commandCache.Append('\0');
 			}
 			//find out if new commands in cache
 			if (m_commandCache.Length() > 0)//or Length()?

@@ -1,7 +1,7 @@
 #include "Controller.h"
 
 Controller::Controller()
-            : public BHandler()
+            :   BHandler()
 {
 }
 

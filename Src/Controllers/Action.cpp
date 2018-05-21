@@ -1,6 +1,6 @@
 #include "Action.h"
 
-Action::Action(int32 what, function<void(BMessage*)> actionFunction)
+Action::Action(uint32 what, function<void(BMessage*)> actionFunction)
             :   _what(what),
                 _actionFunction(actionFunction)
 {
