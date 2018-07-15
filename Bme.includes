@@ -1,0 +1,9 @@
+NetWatch
+Src
+Src/Controllers
+Src/Models
+Src/Models/ChatMessages
+Src/Models/Protocols
+Src/Utils
+Src/Views
+Src/Views/MessageItemViews
