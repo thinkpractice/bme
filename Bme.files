@@ -25,7 +25,6 @@ Src/Controllers/PropertyChangedAction.cpp
 Src/Controllers/PropertyChangedAction.h
 Src/Controllers/ViewController.cpp
 Src/Controllers/ViewController.h
-Src/Controllers/property.cpp
 Src/Controllers/property.h
 Src/Models/AuthenticationHandler.cpp
 Src/Models/AuthenticationHandler.h
