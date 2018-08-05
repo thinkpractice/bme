@@ -2,6 +2,8 @@
 #define PROPERTY_H
 
 #include <memory>
+#include <string>
+#include <app/Message.h>
 
 template <class T>
 class property
@@ -17,6 +19,11 @@ class property
 
         virtual ~property()
         {
+        }
+
+        std::string PropertyId()
+        {
+            return _propertyId;
         }
 
         void operator= (const T& value)
@@ -35,12 +42,16 @@ class property
         {
             if (auto propertyOwner = _owner.lock())
             {
-                propertyOwner->SendNotices(kPropertyChanged);
+                //TODO: make property class BArchivable so we can send it in the notice?
+                BMessage* changedMessage = new BMessage();
+                changedMessage->AddString("property_id", _propertyId.c_str());
+                propertyOwner->SendNotices(kPropertyChanged, changedMessage);
             }
         }
 
     private:
         std::weak_ptr<BHandler> _owner;
+        std::string _propertyId;
         T _value;
 };
 

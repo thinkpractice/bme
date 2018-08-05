@@ -18,10 +18,10 @@ void Controller::MessageReceived(BMessage* message)
     }
 }
 
-void Controller::Bind(uint32 what, function<void(BMessage*)> handlerFunction)
+void Controller::Bind(uint32 what, std::function<void(BMessage*)> handlerFunction)
 {
     Action action(what, handlerFunction);
-    actions.push_back(action);
+    _actions.push_back(action);
 }
 
 

@@ -5,8 +5,7 @@
 #include <functional>
 #include <app/Handler.h>
 #include "Action.h"
-
-using namespace std;
+#include "property.h"
 
 class Controller : public BHandler
 {
@@ -15,10 +14,11 @@ class Controller : public BHandler
         virtual ~Controller();
 
         virtual void MessageReceived(BMessage* message);
-        void Bind(uint32 what, function<void(BMessage*)> handlerFunction);
+        void Bind(uint32 what, std::function<void(BMessage*)> handlerFunction);
 
     private:
-        vector<Action> actions;
+        std::vector<Action> _actions;
+        std::vector<property> _properties;
 };
 
 #endif
