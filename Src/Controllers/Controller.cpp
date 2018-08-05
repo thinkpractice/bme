@@ -27,9 +27,9 @@ void Controller::Bind(uint32 what, Action::ActionCallbackFunction handlerFunctio
 }
 
 //TODO: provide method to unobserve
-void Controller::Observe(const BMessenger& observer, const std::shared_ptr<property> propertyToBind, Action::ActionCallbackFunction handlerFunction)
+void Controller::Observe(const BMessenger& target, const std::shared_ptr<property> propertyToBind, Action::ActionCallbackFunction handlerFunction)
 {
-    this->StartWatching(observer, property::kPropertyChanged);
+    this->StartWatching(target, property::kPropertyChanged);
     PropertyChangedAction action(propertyToBind, handlerFunction);
     _actions.push_back(action);
 }
