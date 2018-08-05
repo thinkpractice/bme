@@ -15,10 +15,11 @@ class Controller : public BHandler
 
         virtual void MessageReceived(BMessage* message);
         void Bind(uint32 what, std::function<void(BMessage*)> handlerFunction);
+        void Observe(const BMessenger& target, const std::shared_ptr<property> propertyToBind);
 
     private:
         std::vector<Action> _actions;
-        std::vector<property> _properties;
+        std::vector<std::shared_ptr<property>> _properties;
 };
 
 #endif

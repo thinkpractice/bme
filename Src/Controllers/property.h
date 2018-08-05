@@ -4,12 +4,14 @@
 #include <memory>
 #include <string>
 #include <app/Message.h>
+#include <support/String.h>
 
 template <class T>
 class property
 {
     public:
         const uint32 kPropertyChanged = 'PrCh';
+        const char* kPropertyIdField = "property::property_id";
 
     public:
         property(std::shared_ptr<BHandler> owner)
@@ -21,7 +23,7 @@ class property
         {
         }
 
-        std::string PropertyId()
+        BString PropertyId()
         {
             return _propertyId;
         }
@@ -44,14 +46,14 @@ class property
             {
                 //TODO: make property class BArchivable so we can send it in the notice?
                 BMessage* changedMessage = new BMessage();
-                changedMessage->AddString("property_id", _propertyId.c_str());
+                changedMessage->AddString(kPropertyIdField, _propertyId);
                 propertyOwner->SendNotices(kPropertyChanged, changedMessage);
             }
         }
 
     private:
         std::weak_ptr<BHandler> _owner;
-        std::string _propertyId;
+        BString _propertyId;
         T _value;
 };
 

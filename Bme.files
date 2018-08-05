@@ -21,6 +21,8 @@ Src/Controllers/Action.h
 Src/Controllers/ContactListViewController.h
 Src/Controllers/Controller.cpp
 Src/Controllers/Controller.h
+Src/Controllers/PropertyChangedAction.cpp
+Src/Controllers/PropertyChangedAction.h
 Src/Controllers/ViewController.cpp
 Src/Controllers/ViewController.h
 Src/Controllers/property.cpp
