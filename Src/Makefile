@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /boot/home/Projects/bme/Src
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/boot/system/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -77,6 +66,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/boot/system/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -149,6 +149,60 @@ BmeApp.s: BmeApp.cpp.s
 BmeApp.cpp.s:
 	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/BmeApp.cpp.s
 .PHONY : BmeApp.cpp.s
+
+Controllers/Action.o: Controllers/Action.cpp.o
+
+.PHONY : Controllers/Action.o
+
+# target to build an object file
+Controllers/Action.cpp.o:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Controllers/Action.cpp.o
+.PHONY : Controllers/Action.cpp.o
+
+Controllers/Action.i: Controllers/Action.cpp.i
+
+.PHONY : Controllers/Action.i
+
+# target to preprocess a source file
+Controllers/Action.cpp.i:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Controllers/Action.cpp.i
+.PHONY : Controllers/Action.cpp.i
+
+Controllers/Action.s: Controllers/Action.cpp.s
+
+.PHONY : Controllers/Action.s
+
+# target to generate assembly for a file
+Controllers/Action.cpp.s:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Controllers/Action.cpp.s
+.PHONY : Controllers/Action.cpp.s
+
+Controllers/Controller.o: Controllers/Controller.cpp.o
+
+.PHONY : Controllers/Controller.o
+
+# target to build an object file
+Controllers/Controller.cpp.o:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Controllers/Controller.cpp.o
+.PHONY : Controllers/Controller.cpp.o
+
+Controllers/Controller.i: Controllers/Controller.cpp.i
+
+.PHONY : Controllers/Controller.i
+
+# target to preprocess a source file
+Controllers/Controller.cpp.i:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Controllers/Controller.cpp.i
+.PHONY : Controllers/Controller.cpp.i
+
+Controllers/Controller.s: Controllers/Controller.cpp.s
+
+.PHONY : Controllers/Controller.s
+
+# target to generate assembly for a file
+Controllers/Controller.cpp.s:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Controllers/Controller.cpp.s
+.PHONY : Controllers/Controller.cpp.s
 
 Controllers/ViewController.o: Controllers/ViewController.cpp.o
 
@@ -2532,12 +2586,18 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Bme"
+	@echo "... edit_cache"
 	@echo "... BmeApp.o"
 	@echo "... BmeApp.i"
 	@echo "... BmeApp.s"
+	@echo "... Controllers/Action.o"
+	@echo "... Controllers/Action.i"
+	@echo "... Controllers/Action.s"
+	@echo "... Controllers/Controller.o"
+	@echo "... Controllers/Controller.i"
+	@echo "... Controllers/Controller.s"
 	@echo "... Controllers/ViewController.o"
 	@echo "... Controllers/ViewController.i"
 	@echo "... Controllers/ViewController.s"
