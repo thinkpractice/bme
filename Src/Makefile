@@ -231,33 +231,6 @@ Controllers/PropertyChangedAction.cpp.s:
 	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Controllers/PropertyChangedAction.cpp.s
 .PHONY : Controllers/PropertyChangedAction.cpp.s
 
-Controllers/ViewController.o: Controllers/ViewController.cpp.o
-
-.PHONY : Controllers/ViewController.o
-
-# target to build an object file
-Controllers/ViewController.cpp.o:
-	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Controllers/ViewController.cpp.o
-.PHONY : Controllers/ViewController.cpp.o
-
-Controllers/ViewController.i: Controllers/ViewController.cpp.i
-
-.PHONY : Controllers/ViewController.i
-
-# target to preprocess a source file
-Controllers/ViewController.cpp.i:
-	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Controllers/ViewController.cpp.i
-.PHONY : Controllers/ViewController.cpp.i
-
-Controllers/ViewController.s: Controllers/ViewController.cpp.s
-
-.PHONY : Controllers/ViewController.s
-
-# target to generate assembly for a file
-Controllers/ViewController.cpp.s:
-	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Controllers/ViewController.cpp.s
-.PHONY : Controllers/ViewController.cpp.s
-
 Models/AuthenticationHandler.o: Models/AuthenticationHandler.cpp.o
 
 .PHONY : Models/AuthenticationHandler.o
@@ -2601,9 +2574,6 @@ help:
 	@echo "... Controllers/PropertyChangedAction.o"
 	@echo "... Controllers/PropertyChangedAction.i"
 	@echo "... Controllers/PropertyChangedAction.s"
-	@echo "... Controllers/ViewController.o"
-	@echo "... Controllers/ViewController.i"
-	@echo "... Controllers/ViewController.s"
 	@echo "... Models/AuthenticationHandler.o"
 	@echo "... Models/AuthenticationHandler.i"
 	@echo "... Models/AuthenticationHandler.s"
