@@ -12,7 +12,7 @@ Controller::~Controller()
 
 void Controller::MessageReceived(BMessage* message)
 {
-    for (auto& action : actions)
+    for (auto& action : _actions)
     {
         if (action.HandlesMessage(message))
             action.Execute(message);
@@ -27,9 +27,9 @@ void Controller::Bind(uint32 what, Action::ActionCallbackFunction handlerFunctio
 }
 
 //TODO: provide method to unobserve
-void Controller::Observe(const BMessenger& target, const std::shared_ptr<property> propertyToBind, Action::ActionCallbackFunction handlerFunction)
+void Controller::Observe(const BMessenger& target, const std::shared_ptr<base_property> propertyToBind, Action::ActionCallbackFunction handlerFunction)
 {
-    this->StartWatching(target, property::kPropertyChanged);
+    this->StartWatching(target, base_property::kPropertyChanged);
     PropertyChangedAction action(propertyToBind, handlerFunction);
     _actions.push_back(action);
 }

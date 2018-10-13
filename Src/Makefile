@@ -204,6 +204,33 @@ Controllers/Controller.cpp.s:
 	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Controllers/Controller.cpp.s
 .PHONY : Controllers/Controller.cpp.s
 
+Controllers/PropertyChangedAction.o: Controllers/PropertyChangedAction.cpp.o
+
+.PHONY : Controllers/PropertyChangedAction.o
+
+# target to build an object file
+Controllers/PropertyChangedAction.cpp.o:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Controllers/PropertyChangedAction.cpp.o
+.PHONY : Controllers/PropertyChangedAction.cpp.o
+
+Controllers/PropertyChangedAction.i: Controllers/PropertyChangedAction.cpp.i
+
+.PHONY : Controllers/PropertyChangedAction.i
+
+# target to preprocess a source file
+Controllers/PropertyChangedAction.cpp.i:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Controllers/PropertyChangedAction.cpp.i
+.PHONY : Controllers/PropertyChangedAction.cpp.i
+
+Controllers/PropertyChangedAction.s: Controllers/PropertyChangedAction.cpp.s
+
+.PHONY : Controllers/PropertyChangedAction.s
+
+# target to generate assembly for a file
+Controllers/PropertyChangedAction.cpp.s:
+	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Controllers/PropertyChangedAction.cpp.s
+.PHONY : Controllers/PropertyChangedAction.cpp.s
+
 Controllers/ViewController.o: Controllers/ViewController.cpp.o
 
 .PHONY : Controllers/ViewController.o
@@ -230,33 +257,6 @@ Controllers/ViewController.s: Controllers/ViewController.cpp.s
 Controllers/ViewController.cpp.s:
 	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Controllers/ViewController.cpp.s
 .PHONY : Controllers/ViewController.cpp.s
-
-Controllers/property.o: Controllers/property.cpp.o
-
-.PHONY : Controllers/property.o
-
-# target to build an object file
-Controllers/property.cpp.o:
-	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Controllers/property.cpp.o
-.PHONY : Controllers/property.cpp.o
-
-Controllers/property.i: Controllers/property.cpp.i
-
-.PHONY : Controllers/property.i
-
-# target to preprocess a source file
-Controllers/property.cpp.i:
-	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Controllers/property.cpp.i
-.PHONY : Controllers/property.cpp.i
-
-Controllers/property.s: Controllers/property.cpp.s
-
-.PHONY : Controllers/property.s
-
-# target to generate assembly for a file
-Controllers/property.cpp.s:
-	$(MAKE) -f CMakeFiles/Bme.dir/build.make CMakeFiles/Bme.dir/Controllers/property.cpp.s
-.PHONY : Controllers/property.cpp.s
 
 Models/AuthenticationHandler.o: Models/AuthenticationHandler.cpp.o
 
@@ -2598,12 +2598,12 @@ help:
 	@echo "... Controllers/Controller.o"
 	@echo "... Controllers/Controller.i"
 	@echo "... Controllers/Controller.s"
+	@echo "... Controllers/PropertyChangedAction.o"
+	@echo "... Controllers/PropertyChangedAction.i"
+	@echo "... Controllers/PropertyChangedAction.s"
 	@echo "... Controllers/ViewController.o"
 	@echo "... Controllers/ViewController.i"
 	@echo "... Controllers/ViewController.s"
-	@echo "... Controllers/property.o"
-	@echo "... Controllers/property.i"
-	@echo "... Controllers/property.s"
 	@echo "... Models/AuthenticationHandler.o"
 	@echo "... Models/AuthenticationHandler.i"
 	@echo "... Models/AuthenticationHandler.s"

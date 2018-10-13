@@ -4,15 +4,31 @@
 #include <memory>
 #include <string>
 #include <app/Message.h>
+#include <app/Handler.h>
 #include <support/String.h>
 
-template <class T>
-class property
+class base_property
 {
-    public:
-        const uint32 kPropertyChanged = 'PrCh';
-        const char* kPropertyIdField = "property::property_id";
+public:
+    static const uint32 kPropertyChanged = 'PrCh';
+    static constexpr const char* kPropertyIdField = "base_property::property_id";
 
+public:
+    base_property() {}
+    virtual ~base_property() {}
+
+    BString PropertyId()
+    {
+        return _propertyId;
+    }
+
+private:
+    BString _propertyId;
+};
+
+template <class T>
+class property : public base_property
+{
     public:
         property(std::shared_ptr<BHandler> owner)
             :	_owner(owner)
@@ -21,11 +37,6 @@ class property
 
         virtual ~property()
         {
-        }
-
-        BString PropertyId()
-        {
-            return _propertyId;
         }
 
         void operator= (const T& value)
@@ -53,12 +64,11 @@ class property
 
     private:
         std::weak_ptr<BHandler> _owner;
-        BString _propertyId;
         T _value;
 };
 
 template <class T>
-std::shared_ptr<property<T>> NewProperty(T value)
+std::shared_ptr<base_property> NewProperty(T value)
 {
     return std::make_shared<property<T>>(value);
 }

@@ -4,6 +4,7 @@
 #include <vector>
 #include <functional>
 #include <app/Handler.h>
+#include <app/Messenger.h>
 #include "Action.h"
 #include "property.h"
 
@@ -15,11 +16,11 @@ class Controller : public BHandler
 
         virtual void MessageReceived(BMessage* message);
         void Bind(uint32 what, Action::ActionCallbackFunction handlerFunction);
-        void Observe(const BMessenger& target, const std::shared_ptr<property> propertyToBind, Action::ActionCallbackFunction handlerFunction);
+        void Observe(const BMessenger& target, const std::shared_ptr<base_property> propertyToBind, Action::ActionCallbackFunction handlerFunction);
 
     private:
         std::vector<Action> _actions;
-        std::vector<std::shared_ptr<property>> _properties;
+        std::vector<std::shared_ptr<base_property>> _properties;
 };
 
 #endif

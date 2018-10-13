@@ -5,9 +5,9 @@ project(Bme)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_LIBRARY_PATH $(CMAKE_LIBRARY_PATH) /boot/system/lib)
 
+find_package(GTest)
+
 file(GLOB BmeSrc
-"*.h"
-"*.cpp"
 "Controllers/*.h"
 "Controllers/*.cpp"
 "Models/*.h"
@@ -24,12 +24,32 @@ file(GLOB BmeSrc
 "Utils/*.cpp"
 )
 
+file(GLOB UnitTestsSrc
+"UnitTests/Controllers/*.h"
+"UnitTests/Controllers/*.cpp"
+"UnitTests/Models/*.h"
+"UnitTests/Models/*.cpp"
+"UnitTests/Models/Protocols/*.h"
+"UnitTests/Models/Protocols/*.cpp"
+"UnitTests/Models/ChatMessages/*.h"
+"UnitTests/Models/ChatMessages/*.cpp"
+"UnitTests/Views/*.h"
+"UnitTests/Views/*.cpp"
+"UnitTests/Views/MessageItemViews/*.h"
+"UnitTests/Views/MessageItemViews/*.cpp"
+"UnitTests/Utils/*.h"
+"UnitTests/Utils/*.cpp"
+)
+
 set( ProjectIncludes "." "Controllers" "Models" "Models/Protocols" "Models/ChatMessages" "Views" "Views/MessageItemViews" "Utils")
 include_directories(${ProjectIncludes})
 
 link_directories("/boot/system/lib/x86")
 
-add_executable(Bme ${BmeSrc})
-target_link_libraries(Bme be bnetapi crypto translation ssl)
+set( BmeLibs be bnetapi crypto translation ssl)
 
+add_executable(Bme BmeApp.cpp ${BmeSrc})
+target_link_libraries(Bme ${BmeLibs})
 
+#add_executable(BmeTests ${UnitTestsSrc} ${BmeSrc})
+#target_link_libraries(BmeTests gtest ${BmeLibs})

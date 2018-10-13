@@ -8,7 +8,7 @@
 class PropertyChangedAction : public Action
 {
 public:
-    PropertyChangedAction(std::shared_ptr<property> property, ActionCallbackFunction callbackFunction);
+    PropertyChangedAction(std::shared_ptr<base_property> property, ActionCallbackFunction callbackFunction);
     virtual ~PropertyChangedAction();
 
     virtual bool HandlesMessage(BMessage* message);
