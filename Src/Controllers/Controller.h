@@ -17,6 +17,7 @@ class Controller : public BHandler
         virtual void MessageReceived(BMessage* message);
         void Bind(uint32 what, Action::ActionCallbackFunction handlerFunction);
         void Observe(const BMessenger& target, const std::shared_ptr<base_property> propertyToBind, Action::ActionCallbackFunction handlerFunction);
+        void Observe(const std::shared_ptr<base_property> propertyToBind, Action::ActionCallbackFunction handlerFunction);
 
     private:
         std::vector<Action> _actions;

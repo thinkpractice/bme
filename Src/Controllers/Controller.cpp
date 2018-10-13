@@ -33,3 +33,10 @@ void Controller::Observe(const BMessenger& target, const std::shared_ptr<base_pr
     PropertyChangedAction action(propertyToBind, handlerFunction);
     _actions.push_back(action);
 }
+
+void Controller::Observe(const std::shared_ptr<base_property> propertyToBind, Action::ActionCallbackFunction handlerFunction)
+{
+    BMessenger messenger(this);
+    Observe(messenger, propertyToBind, handlerFunction);
+}
+
