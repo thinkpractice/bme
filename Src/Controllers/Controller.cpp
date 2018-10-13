@@ -1,8 +1,9 @@
 #include "Controller.h"
 #include "PropertyChangedAction.h"
 
-Controller::Controller()
-            :   BHandler()
+Controller::Controller(std::shared_ptr<T> owner)
+            :   BHandler(),
+                _owner(owner)
 {
 }
 
