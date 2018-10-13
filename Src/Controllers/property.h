@@ -30,8 +30,9 @@ template <class T>
 class property : public base_property
 {
     public:
-        property(std::shared_ptr<BHandler> owner)
-            :	_owner(owner)
+        property(std::shared_ptr<BHandler> owner, T value)
+            :	_owner(owner),
+                _value(value)
         {
         }
 
@@ -68,9 +69,9 @@ class property : public base_property
 };
 
 template <class T>
-std::shared_ptr<base_property> NewProperty(T value)
+std::shared_ptr<base_property> NewProperty(std::shared_ptr<BHandler> owner, T value)
 {
-    return std::make_shared<property<T>>(value);
+    return std::make_shared<property<T>>(owner, value);
 }
 
 #endif
